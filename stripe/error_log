@@ -1,0 +1,69 @@
+[25-Jul-2024 11:54:09 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/dbConnect.php:3
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/dbConnect.php(3): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'codexworld')
+#1 /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php(7): include_once('/home2/shahruk1...')
+#2 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/dbConnect.php on line 3
+[25-Jul-2024 11:54:37 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/dbConnect.php:3
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/dbConnect.php(3): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'codexworld')
+#1 /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php(7): include_once('/home2/shahruk1...')
+#2 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/dbConnect.php on line 3
+[25-Jul-2024 11:54:41 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/dbConnect.php:3
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/dbConnect.php(3): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'codexworld')
+#1 /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php(7): include_once('/home2/shahruk1...')
+#2 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/dbConnect.php on line 3
+[25-Jul-2024 11:54:51 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/dbConnect.php:3
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/dbConnect.php(3): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'codexworld')
+#1 /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php(7): include_once('/home2/shahruk1...')
+#2 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/dbConnect.php on line 3
+[15-Aug-2024 06:41:54 America/Chicago] PHP Warning:  Undefined array key "login_user" in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 06:41:54 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 06:48:11 America/Chicago] PHP Warning:  Undefined array key "login_user" in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 06:48:11 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 07:03:21 America/Chicago] PHP Warning:  Undefined array key "login_user" in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 07:03:21 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 07:13:44 America/Chicago] PHP Warning:  Undefined array key "login_user" in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 07:13:44 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 07:15:36 America/Chicago] PHP Warning:  Undefined array key "login_user" in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 07:15:36 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 07:17:39 America/Chicago] PHP Warning:  Undefined array key "login_user" in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 07:17:39 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 07:18:37 America/Chicago] PHP Warning:  Undefined array key "login_user" in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 07:18:37 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 139
+[15-Aug-2024 09:51:55 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/index.php on line 9
+[15-Aug-2024 09:51:56 America/Chicago] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * int in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php:31
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 31
+[15-Aug-2024 09:55:12 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/index.php on line 9
+[15-Aug-2024 09:55:13 America/Chicago] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * int in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php:31
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 31
+[16-Aug-2024 07:00:26 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/index.php on line 9
+[16-Aug-2024 07:00:26 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/index.php on line 10
+[16-Aug-2024 07:00:26 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/index.php on line 11
+[16-Aug-2024 07:00:28 America/Chicago] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * int in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php:31
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 31
+[20-Aug-2024 02:41:16 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/index.php on line 9
+[20-Aug-2024 02:41:16 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/index.php on line 10
+[20-Aug-2024 02:41:16 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/index.php on line 11
+[20-Aug-2024 02:41:17 America/Chicago] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * int in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php:31
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 31
+[20-Aug-2024 02:42:41 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/index.php on line 9
+[20-Aug-2024 02:42:41 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/index.php on line 10
+[20-Aug-2024 02:42:41 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/index.php on line 11
+[20-Aug-2024 02:42:41 America/Chicago] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * int in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php:31
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/stripe/payment_init.php on line 31

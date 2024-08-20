@@ -1,0 +1,505 @@
+[10-Jun-2024 07:12:46 America/Chicago] PHP Warning:  Undefined array key "veterinarian" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_register.php on line 20
+[10-Jun-2024 07:32:17 America/Chicago] PHP Warning:  Undefined array key "veterinarian" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_register.php on line 20
+[10-Jun-2024 07:32:27 America/Chicago] PHP Warning:  Undefined array key "veterinarian" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_register.php on line 20
+[10-Jun-2024 08:06:23 America/Chicago] PHP Parse error:  Unclosed '{' on line 8 in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_register.php on line 60
+[10-Jun-2024 08:06:36 America/Chicago] PHP Parse error:  Unclosed '{' on line 8 in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_register.php on line 60
+[11-Jun-2024 03:40:57 America/Chicago] PHP Warning:  Undefined array key "is_enable" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_update_user.php on line 8
+[11-Jun-2024 03:41:20 America/Chicago] PHP Warning:  Undefined array key "is_enable" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_update_user.php on line 8
+[11-Jun-2024 03:42:02 America/Chicago] PHP Warning:  Undefined array key "is_enable" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_update_user.php on line 8
+[11-Jun-2024 04:49:33 America/Chicago] PHP Warning:  Undefined variable $user_email in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_update_user.php on line 40
+[11-Jun-2024 04:49:33 America/Chicago] PHP Warning:  Undefined variable $token in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_update_user.php on line 78
+[11-Jun-2024 04:50:19 America/Chicago] PHP Warning:  Undefined variable $user_email in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_update_user.php on line 40
+[11-Jun-2024 04:50:19 America/Chicago] PHP Warning:  Undefined variable $token in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_update_user.php on line 78
+[11-Jun-2024 04:52:30 America/Chicago] PHP Warning:  Undefined variable $token in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_update_user.php on line 78
+[11-Jun-2024 06:23:12 America/Chicago] PHP Warning:  Undefined variable $token in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/auth_update_user.php on line 78
+[13-Jun-2024 09:50:54 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Column count doesn't match value count at row 1 in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php:14
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php(14): mysqli_query(Object(mysqli), 'INSERT INTO `in...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 14
+[13-Jun-2024 09:52:34 America/Chicago] PHP Warning:  Undefined array key "invoiceno" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 4
+[13-Jun-2024 09:52:34 America/Chicago] PHP Warning:  Undefined array key "veterinary_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 5
+[13-Jun-2024 09:52:34 America/Chicago] PHP Warning:  Undefined array key "pharmacy_name" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 6
+[13-Jun-2024 09:52:34 America/Chicago] PHP Warning:  Undefined array key "pharmacy_phone" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 7
+[13-Jun-2024 09:52:34 America/Chicago] PHP Warning:  Undefined array key "pharmacy_address" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 8
+[13-Jun-2024 09:52:34 America/Chicago] PHP Warning:  Undefined array key "petowner_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 9
+[13-Jun-2024 09:52:34 America/Chicago] PHP Warning:  Undefined array key "pet_owner_address" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 10
+[13-Jun-2024 09:52:34 America/Chicago] PHP Warning:  Undefined array key "prescribing_drugs" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 11
+[13-Jun-2024 09:52:34 America/Chicago] PHP Warning:  Undefined array key "quantity" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 12
+[13-Jun-2024 09:52:34 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Column count doesn't match value count at row 1 in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php:14
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php(14): mysqli_query(Object(mysqli), 'INSERT INTO `in...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 14
+[13-Jun-2024 09:52:41 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Column count doesn't match value count at row 1 in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php:14
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php(14): mysqli_query(Object(mysqli), 'INSERT INTO `in...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 14
+[13-Jun-2024 09:54:29 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Column count doesn't match value count at row 1 in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php:14
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php(14): mysqli_query(Object(mysqli), 'INSERT INTO `in...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 14
+[13-Jun-2024 09:54:54 America/Chicago] PHP Warning:  Undefined variable $invoiceno in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 4
+[13-Jun-2024 09:54:54 America/Chicago] PHP Warning:  Undefined variable $veterinary_id in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 4
+[13-Jun-2024 09:54:54 America/Chicago] PHP Warning:  Undefined variable $pharmacy_name in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 4
+[13-Jun-2024 09:54:54 America/Chicago] PHP Warning:  Undefined variable $pharmacy_phone in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 4
+[13-Jun-2024 09:54:54 America/Chicago] PHP Warning:  Undefined variable $pharmacy_address in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 4
+[13-Jun-2024 09:54:54 America/Chicago] PHP Warning:  Undefined variable $petowner_id in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 4
+[13-Jun-2024 09:54:54 America/Chicago] PHP Warning:  Undefined variable $pet_owner_address in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 4
+[13-Jun-2024 09:54:54 America/Chicago] PHP Warning:  Undefined variable $prescribing_drugs in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 4
+[13-Jun-2024 09:54:54 America/Chicago] PHP Warning:  Undefined variable $quantity in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 4
+[13-Jun-2024 09:58:44 America/Chicago] PHP Warning:  Undefined variable $invoiceno in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 5
+[13-Jun-2024 09:58:44 America/Chicago] PHP Warning:  Undefined variable $veterinary_id in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 5
+[13-Jun-2024 09:58:44 America/Chicago] PHP Warning:  Undefined variable $pharmacy_name in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 5
+[13-Jun-2024 09:58:44 America/Chicago] PHP Warning:  Undefined variable $pharmacy_phone in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 5
+[13-Jun-2024 09:58:44 America/Chicago] PHP Warning:  Undefined variable $pharmacy_address in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 5
+[13-Jun-2024 09:58:44 America/Chicago] PHP Warning:  Undefined variable $petowner_id in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 5
+[13-Jun-2024 09:58:44 America/Chicago] PHP Warning:  Undefined variable $pet_owner_address in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 5
+[13-Jun-2024 09:58:44 America/Chicago] PHP Warning:  Undefined variable $prescribing_drugs in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 5
+[13-Jun-2024 09:58:44 America/Chicago] PHP Warning:  Undefined variable $quantity in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 5
+[21-Jun-2024 09:45:05 America/Chicago] PHP Warning:  Undefined array key "user_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/services.php on line 6
+[21-Jun-2024 09:45:05 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `user_id` = ''' at line 1 in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/services.php:7
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/services.php(7): mysqli_query(Object(mysqli), 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/services.php on line 7
+[21-Jun-2024 09:45:33 America/Chicago] PHP Warning:  Undefined array key "user_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/services.php on line 6
+[21-Jun-2024 09:45:33 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `user_id` = ''' at line 1 in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/services.php:7
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/services.php(7): mysqli_query(Object(mysqli), 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/services.php on line 7
+[21-Jun-2024 09:46:06 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `user_id` = '6'' at line 1 in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/services.php:7
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/services.php(7): mysqli_query(Object(mysqli), 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/services.php on line 7
+[24-Jun-2024 03:46:33 America/Chicago] PHP Warning:  Undefined array key "login_user" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 6
+[24-Jun-2024 03:46:33 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 6
+[24-Jun-2024 03:46:46 America/Chicago] PHP Warning:  Undefined array key "login_user" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 6
+[24-Jun-2024 03:46:46 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 6
+[24-Jun-2024 03:47:30 America/Chicago] PHP Warning:  Undefined array key "login_user" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 6
+[24-Jun-2024 03:47:30 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 6
+[24-Jun-2024 07:06:19 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`shahruk1_televet`.`invoices`, CONSTRAINT `invoices_ibfk_1` FOREIGN KEY (`veterinarian_id`) REFERENCES `vetprofiles` (`id`)) in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php:13
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php(13): mysqli_query(Object(mysqli), 'INSERT INTO `in...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 13
+[25-Jun-2024 07:34:36 America/Chicago] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * float in /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php:3508
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3623): TCPDF->Header()
+#1 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3290): TCPDF->setHeader()
+#2 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3202): TCPDF->startPage('', '', false)
+#3 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php(59): TCPDF->AddPage()
+#4 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php on line 3508
+[25-Jun-2024 07:35:18 America/Chicago] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * float in /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php:3508
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3623): TCPDF->Header()
+#1 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3290): TCPDF->setHeader()
+#2 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3202): TCPDF->startPage('', '', false)
+#3 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php(59): TCPDF->AddPage()
+#4 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php on line 3508
+[25-Jun-2024 07:35:25 America/Chicago] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * float in /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php:3508
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3623): TCPDF->Header()
+#1 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3290): TCPDF->setHeader()
+#2 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3202): TCPDF->startPage('', '', false)
+#3 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php(59): TCPDF->AddPage()
+#4 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php on line 3508
+[25-Jun-2024 07:35:53 America/Chicago] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * float in /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php:3508
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3623): TCPDF->Header()
+#1 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3290): TCPDF->setHeader()
+#2 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3202): TCPDF->startPage('', '', false)
+#3 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php(59): TCPDF->AddPage()
+#4 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php on line 3508
+[25-Jun-2024 07:36:44 America/Chicago] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * float in /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php:3508
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3623): TCPDF->Header()
+#1 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3290): TCPDF->setHeader()
+#2 /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php(3202): TCPDF->startPage('', '', false)
+#3 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php(59): TCPDF->AddPage()
+#4 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/tcpdf/tcpdf.php on line 3508
+[25-Jun-2024 08:49:17 America/Chicago] PHP Warning:  require_once(tcpdf/tcpdf.php): Failed to open stream: No such file or directory in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 2
+[25-Jun-2024 08:49:17 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required 'tcpdf/tcpdf.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 2
+[25-Jun-2024 08:49:18 America/Chicago] PHP Warning:  require_once(tcpdf/tcpdf.php): Failed to open stream: No such file or directory in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 2
+[25-Jun-2024 08:49:18 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required 'tcpdf/tcpdf.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 2
+[25-Jun-2024 08:58:03 America/Chicago] PHP Warning:  require_once(tcpdf/tcpdf.php): Failed to open stream: No such file or directory in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 2
+[25-Jun-2024 08:58:03 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required 'tcpdf/tcpdf.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 2
+[25-Jun-2024 09:23:24 America/Chicago] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 4
+[25-Jun-2024 09:23:26 America/Chicago] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 4
+[26-Jun-2024 02:49:50 America/Chicago] PHP Warning:  require_once(../../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 2
+[26-Jun-2024 02:49:50 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '../../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 2
+[26-Jun-2024 02:51:21 America/Chicago] PHP Warning:  require_once(../../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 2
+[26-Jun-2024 02:51:21 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '../../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 2
+[26-Jun-2024 02:55:35 America/Chicago] PHP Warning:  require_once(../../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 2
+[26-Jun-2024 02:55:35 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '../../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 2
+[26-Jun-2024 02:58:22 America/Chicago] PHP Warning:  require_once(../../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 2
+[26-Jun-2024 02:58:22 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '../../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 2
+[26-Jun-2024 04:05:35 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 10
+[26-Jun-2024 04:05:37 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 10
+[26-Jun-2024 04:17:00 America/Chicago] PHP Warning:  Undefined variable $conn in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 11
+[26-Jun-2024 04:17:00 America/Chicago] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php:11
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php(11): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php(8): require_once('/home2/shahruk1...')
+#2 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 11
+[26-Jun-2024 04:17:46 America/Chicago] PHP Warning:  Undefined variable $conn in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 11
+[26-Jun-2024 04:17:46 America/Chicago] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php:11
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php(11): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php(8): require_once('/home2/shahruk1...')
+#2 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/pdfviewer.php on line 11
+[26-Jun-2024 04:33:23 America/Chicago] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 12
+[26-Jun-2024 04:33:30 America/Chicago] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 12
+[26-Jun-2024 04:34:06 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_result() in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php:86
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 86
+[26-Jun-2024 04:37:55 America/Chicago] PHP Parse error:  syntax error, unexpected identifier "Y" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 78
+[26-Jun-2024 05:20:41 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_result() in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php:84
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 84
+[26-Jun-2024 05:21:38 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_result() in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php:84
+Stack trace:
+#0 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/invoice_pdf.php on line 84
+[26-Jun-2024 07:34:39 America/Chicago] PHP Warning:  Undefined variable $email in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/login_user.php on line 6
+[26-Jun-2024 07:34:39 America/Chicago] PHP Warning:  Undefined variable $password in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/login_user.php on line 6
+[26-Jun-2024 07:34:42 America/Chicago] PHP Warning:  Undefined variable $email in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/login_user.php on line 6
+[26-Jun-2024 07:34:42 America/Chicago] PHP Warning:  Undefined variable $password in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/login_user.php on line 6
+[26-Jun-2024 07:34:42 America/Chicago] PHP Warning:  Undefined variable $email in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/login_user.php on line 6
+[26-Jun-2024 07:34:42 America/Chicago] PHP Warning:  Undefined variable $password in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/login_user.php on line 6
+[26-Jun-2024 07:35:34 America/Chicago] PHP Warning:  Undefined variable $email in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/login_user.php on line 6
+[26-Jun-2024 07:35:34 America/Chicago] PHP Warning:  Undefined variable $password in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/login_user.php on line 6
+[26-Jun-2024 07:36:30 America/Chicago] PHP Warning:  Undefined variable $email in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/login_user.php on line 6
+[26-Jun-2024 07:36:30 America/Chicago] PHP Warning:  Undefined variable $password in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/login_user.php on line 6
+[26-Jun-2024 07:36:32 America/Chicago] PHP Warning:  Undefined variable $email in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/login_user.php on line 6
+[26-Jun-2024 07:36:32 America/Chicago] PHP Warning:  Undefined variable $password in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/login_user.php on line 6
+[28-Jun-2024 11:37:26 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'invoice_date' in 'field list' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/graphs.php:6
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/graphs.php(6): mysqli_query(Object(mysqli), 'SELECT sum(paid...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/graphs.php on line 6
+[28-Jun-2024 11:37:33 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'invoice_date' in 'field list' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/graphs.php:6
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/graphs.php(6): mysqli_query(Object(mysqli), 'SELECT sum(paid...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/graphs.php on line 6
+[28-Jun-2024 11:37:46 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'invoice_date' in 'field list' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/graphs.php:6
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/graphs.php(6): mysqli_query(Object(mysqli), 'SELECT sum(paid...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/graphs.php on line 6
+[28-Jun-2024 11:38:30 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'invoice_date' in 'field list' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/graphs.php:6
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/graphs.php(6): mysqli_query(Object(mysqli), 'SELECT sum(paid...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/graphs.php on line 6
+[15-Jul-2024 03:26:28 America/Chicago] PHP Parse error:  syntax error, unexpected identifier "Barlow" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 231
+[15-Jul-2024 03:26:30 America/Chicago] PHP Parse error:  syntax error, unexpected identifier "Barlow" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 231
+[15-Jul-2024 03:28:09 America/Chicago] PHP Warning:  Undefined variable $user_email in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 26
+[15-Jul-2024 11:09:02 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/generate_label.php on line 40
+[15-Jul-2024 11:09:28 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/generate_label.php on line 40
+[15-Jul-2024 11:10:28 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/generate_label.php on line 40
+[15-Jul-2024 11:14:22 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/generate_label.php on line 40
+[15-Jul-2024 11:24:09 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/generate_label.php on line 40
+[15-Jul-2024 11:32:42 America/Chicago] PHP Warning:  Undefined variable $invoice_no in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/generate_label.php on line 35
+[15-Jul-2024 11:49:56 America/Chicago] PHP Warning:  Undefined variable $invoice_no in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/generate_label.php on line 35
+[15-Jul-2024 11:55:51 America/Chicago] PHP Warning:  Undefined variable $invoice_no in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/generate_label.php on line 35
+[16-Jul-2024 18:14:17 America/Chicago] PHP Warning:  Undefined array key "login_users" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 8
+[16-Jul-2024 18:14:17 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 8
+[16-Jul-2024 18:14:17 America/Chicago] PHP Warning:  Undefined array key "login_users" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 9
+[16-Jul-2024 18:14:17 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/create_invoice.php on line 9
+[18-Jul-2024 07:04:20 America/Chicago] PHP Warning:  Undefined variable $email in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_vet_profile.php on line 24
+[18-Jul-2024 07:04:20 America/Chicago] PHP Warning:  Undefined variable $pharmacy_code in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_vet_profile.php on line 25
+[18-Jul-2024 07:04:20 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `user_id` = '23'' at line 1 in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_vet_profile.php:25
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_vet_profile.php(25): mysqli_query(Object(mysqli), 'UPDATE `user_in...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_vet_profile.php on line 25
+[18-Jul-2024 07:06:54 America/Chicago] PHP Warning:  Undefined variable $email in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_vet_profile.php on line 19
+[18-Jul-2024 07:10:12 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '` = 'vet testing 1' WHERE `id` = '23'' at line 1 in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_vet_profile.php:19
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_vet_profile.php(19): mysqli_query(Object(mysqli), 'UPDATE `user` S...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_vet_profile.php on line 19
+[18-Jul-2024 07:10:30 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '` = 'vet testing 1' WHERE `id` = '23'' at line 1 in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_vet_profile.php:19
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_vet_profile.php(19): mysqli_query(Object(mysqli), 'UPDATE `user` S...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_vet_profile.php on line 19
+[22-Jul-2024 04:52:45 America/Chicago] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_result(), 2 passed in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 38 and exactly 3 expected in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/function.php:3
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php(38): get_result(Object(mysqli), '6')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/function.php on line 3
+[22-Jul-2024 04:53:01 America/Chicago] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_result(), 2 passed in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 38 and exactly 3 expected in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/function.php:3
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php(38): get_result(Object(mysqli), '6')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/function.php on line 3
+[22-Jul-2024 04:53:09 America/Chicago] PHP Warning:  Undefined array key "flag" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 7
+[22-Jul-2024 04:53:09 America/Chicago] PHP Warning:  Undefined array key "flag" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 28
+[22-Jul-2024 04:53:11 America/Chicago] PHP Warning:  Undefined array key "flag" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 7
+[22-Jul-2024 04:53:11 America/Chicago] PHP Warning:  Undefined array key "flag" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 28
+[22-Jul-2024 04:53:44 America/Chicago] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_result(), 2 passed in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 38 and exactly 3 expected in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/function.php:3
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php(38): get_result(Object(mysqli), '6')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/function.php on line 3
+[22-Jul-2024 04:55:39 America/Chicago] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_result(), 2 passed in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 38 and exactly 3 expected in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/function.php:3
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php(38): get_result(Object(mysqli), '6user')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/function.php on line 3
+[22-Jul-2024 05:42:40 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '100' for key 'delivery_id' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php:45
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php(45): mysqli_query(Object(mysqli), 'INSERT INTO `de...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 45
+[22-Jul-2024 05:44:07 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '100' for key 'delivery_id' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php:45
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php(45): mysqli_query(Object(mysqli), 'INSERT INTO `de...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 45
+[22-Jul-2024 05:44:14 America/Chicago] PHP Warning:  Undefined array key "flag" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 7
+[22-Jul-2024 05:44:14 America/Chicago] PHP Warning:  Undefined array key "flag" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 22
+[22-Jul-2024 05:44:14 America/Chicago] PHP Warning:  Undefined array key "flag" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 37
+[22-Jul-2024 05:49:19 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '100' for key 'delivery_id' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php:45
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php(45): mysqli_query(Object(mysqli), 'INSERT INTO `de...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 45
+[22-Jul-2024 05:51:29 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '100' for key 'delivery_id' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php:45
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php(45): mysqli_query(Object(mysqli), 'INSERT INTO `de...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/delivery_invoices.php on line 45
+[22-Jul-2024 05:52:17 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '100' for key 'delivery_id' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php:10
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php(10): mysqli_query(Object(mysqli), 'INSERT INTO `de...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 10
+[22-Jul-2024 05:52:18 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '100' for key 'delivery_id' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php:10
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php(10): mysqli_query(Object(mysqli), 'INSERT INTO `de...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 10
+[22-Jul-2024 05:52:24 America/Chicago] PHP Warning:  Undefined array key "invoice_no" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 05:52:24 America/Chicago] PHP Warning:  Undefined array key "pet_owner" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 5
+[22-Jul-2024 05:52:24 America/Chicago] PHP Warning:  Undefined array key "pickupaddress" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 6
+[22-Jul-2024 05:52:24 America/Chicago] PHP Warning:  Undefined array key "dropoffaddress" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 7
+[22-Jul-2024 05:52:24 America/Chicago] PHP Warning:  Undefined array key "weight" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 8
+[22-Jul-2024 05:52:28 America/Chicago] PHP Warning:  Undefined array key "invoice_no" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 05:52:28 America/Chicago] PHP Warning:  Undefined array key "pet_owner" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 5
+[22-Jul-2024 05:52:28 America/Chicago] PHP Warning:  Undefined array key "pickupaddress" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 6
+[22-Jul-2024 05:52:28 America/Chicago] PHP Warning:  Undefined array key "dropoffaddress" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 7
+[22-Jul-2024 05:52:28 America/Chicago] PHP Warning:  Undefined array key "weight" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 8
+[22-Jul-2024 05:52:28 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '' for key 'delivery_id' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php:10
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php(10): mysqli_query(Object(mysqli), 'INSERT INTO `de...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 10
+[22-Jul-2024 05:53:00 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '100' for key 'delivery_id' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php:10
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php(10): mysqli_query(Object(mysqli), 'INSERT INTO `de...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 10
+[22-Jul-2024 05:57:35 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '100' for key 'delivery_id' in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php:12
+Stack trace:
+#0 /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php(12): mysqli_query(Object(mysqli), 'INSERT INTO `de...')
+#1 {main}
+  thrown in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 12
+[22-Jul-2024 06:02:29 America/Chicago] PHP Warning:  Undefined variable $invoice_no in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/generate_label.php on line 35
+[22-Jul-2024 07:21:22 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 07:21:22 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 23
+[22-Jul-2024 07:21:22 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 24
+[22-Jul-2024 07:21:22 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 25
+[22-Jul-2024 07:21:22 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 30
+[22-Jul-2024 07:21:22 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 31
+[22-Jul-2024 07:21:22 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 36
+[22-Jul-2024 07:21:22 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 37
+[22-Jul-2024 07:21:22 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 38
+[22-Jul-2024 07:21:22 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 39
+[22-Jul-2024 07:21:22 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 40
+[22-Jul-2024 07:21:22 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 55
+[22-Jul-2024 07:22:02 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 07:22:02 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 23
+[22-Jul-2024 07:22:02 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 24
+[22-Jul-2024 07:22:02 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 25
+[22-Jul-2024 07:22:02 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 30
+[22-Jul-2024 07:22:02 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 31
+[22-Jul-2024 07:22:02 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 36
+[22-Jul-2024 07:22:02 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 37
+[22-Jul-2024 07:22:02 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 38
+[22-Jul-2024 07:22:02 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 39
+[22-Jul-2024 07:22:02 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 40
+[22-Jul-2024 07:22:03 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 55
+[22-Jul-2024 07:24:36 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 07:24:36 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 23
+[22-Jul-2024 07:24:36 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 24
+[22-Jul-2024 07:24:36 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 25
+[22-Jul-2024 07:24:36 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 30
+[22-Jul-2024 07:24:36 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 31
+[22-Jul-2024 07:24:36 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 36
+[22-Jul-2024 07:24:36 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 37
+[22-Jul-2024 07:24:36 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 38
+[22-Jul-2024 07:24:36 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 39
+[22-Jul-2024 07:24:36 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 40
+[22-Jul-2024 07:24:36 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 55
+[22-Jul-2024 07:26:01 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 07:26:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 23
+[22-Jul-2024 07:26:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 24
+[22-Jul-2024 07:26:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 25
+[22-Jul-2024 07:26:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 30
+[22-Jul-2024 07:26:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 31
+[22-Jul-2024 07:26:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 36
+[22-Jul-2024 07:26:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 37
+[22-Jul-2024 07:26:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 38
+[22-Jul-2024 07:26:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 39
+[22-Jul-2024 07:26:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 40
+[22-Jul-2024 07:26:01 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 55
+[22-Jul-2024 07:26:59 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 07:26:59 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 23
+[22-Jul-2024 07:26:59 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 24
+[22-Jul-2024 07:26:59 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 25
+[22-Jul-2024 07:26:59 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 30
+[22-Jul-2024 07:26:59 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 31
+[22-Jul-2024 07:26:59 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 36
+[22-Jul-2024 07:26:59 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 37
+[22-Jul-2024 07:26:59 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 38
+[22-Jul-2024 07:26:59 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 39
+[22-Jul-2024 07:26:59 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 40
+[22-Jul-2024 07:26:59 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 55
+[22-Jul-2024 07:31:19 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 07:31:19 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 23
+[22-Jul-2024 07:31:19 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 24
+[22-Jul-2024 07:31:19 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 25
+[22-Jul-2024 07:31:19 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 30
+[22-Jul-2024 07:31:19 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 31
+[22-Jul-2024 07:31:19 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 36
+[22-Jul-2024 07:31:19 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 37
+[22-Jul-2024 07:31:19 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 38
+[22-Jul-2024 07:31:19 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 39
+[22-Jul-2024 07:31:19 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 40
+[22-Jul-2024 07:31:19 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 55
+[22-Jul-2024 07:33:01 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 07:33:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 23
+[22-Jul-2024 07:33:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 24
+[22-Jul-2024 07:33:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 25
+[22-Jul-2024 07:33:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 30
+[22-Jul-2024 07:33:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 31
+[22-Jul-2024 07:33:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 36
+[22-Jul-2024 07:33:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 37
+[22-Jul-2024 07:33:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 38
+[22-Jul-2024 07:33:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 39
+[22-Jul-2024 07:33:01 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 40
+[22-Jul-2024 07:33:44 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 07:33:44 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 23
+[22-Jul-2024 07:33:44 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 24
+[22-Jul-2024 07:33:44 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 25
+[22-Jul-2024 07:33:44 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 30
+[22-Jul-2024 07:33:44 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 31
+[22-Jul-2024 07:33:44 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 36
+[22-Jul-2024 07:33:44 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 37
+[22-Jul-2024 07:33:44 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 38
+[22-Jul-2024 07:33:44 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 39
+[22-Jul-2024 07:33:44 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 40
+[22-Jul-2024 07:34:20 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 07:34:20 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 23
+[22-Jul-2024 07:34:20 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 24
+[22-Jul-2024 07:34:20 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 25
+[22-Jul-2024 07:34:20 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 30
+[22-Jul-2024 07:34:20 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 31
+[22-Jul-2024 07:34:20 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 36
+[22-Jul-2024 07:34:20 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 37
+[22-Jul-2024 07:34:20 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 38
+[22-Jul-2024 07:34:20 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 39
+[22-Jul-2024 07:34:20 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 40
+[22-Jul-2024 07:34:20 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 59
+[22-Jul-2024 07:36:57 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 07:36:57 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 23
+[22-Jul-2024 07:36:57 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 24
+[22-Jul-2024 07:36:57 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 25
+[22-Jul-2024 07:36:57 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 30
+[22-Jul-2024 07:36:57 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 31
+[22-Jul-2024 07:36:57 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 36
+[22-Jul-2024 07:36:57 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 37
+[22-Jul-2024 07:36:57 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 38
+[22-Jul-2024 07:36:57 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 39
+[22-Jul-2024 07:36:57 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 40
+[22-Jul-2024 07:36:57 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 59
+[22-Jul-2024 07:38:04 America/Chicago] PHP Warning:  Undefined array key "invoice_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[22-Jul-2024 07:38:04 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 23
+[22-Jul-2024 07:38:04 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 24
+[22-Jul-2024 07:38:04 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 25
+[22-Jul-2024 07:38:04 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 30
+[22-Jul-2024 07:38:04 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 31
+[22-Jul-2024 07:38:04 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 39
+[22-Jul-2024 07:38:04 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 40
+[22-Jul-2024 07:38:04 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 41
+[22-Jul-2024 07:38:04 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 42
+[22-Jul-2024 07:38:04 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 43
+[22-Jul-2024 07:40:28 America/Chicago] PHP Warning:  Undefined variable $invoice_no in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 61
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Undefined array key "invoice_no" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 4
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Undefined array key "pet_owner" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 5
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Undefined array key "pickupaddress" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 6
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Undefined array key "dropoffaddress" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 7
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Undefined array key "weight" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 8
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 17
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 18
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 19
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 24
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 25
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 30
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 31
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 32
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 33
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 34
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Undefined variable $invoice_no in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 44
+[23-Jul-2024 02:49:15 America/Chicago] PHP Warning:  Undefined array key "wyngit_id" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 49
+[27-Jul-2024 11:09:14 America/Chicago] PHP Warning:  Undefined variable $invoice_no in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/new_delivery.php on line 44
+[08-Aug-2024 09:32:26 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php:53) in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php on line 69
+[08-Aug-2024 09:32:33 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php:62) in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php on line 69
+[08-Aug-2024 12:50:26 America/Chicago] PHP Warning:  Undefined array key "flag" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php on line 6
+[08-Aug-2024 12:50:26 America/Chicago] PHP Warning:  Undefined array key "name" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php on line 36
+[08-Aug-2024 12:50:26 America/Chicago] PHP Warning:  Undefined array key "pets_number" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php on line 37
+[08-Aug-2024 12:50:26 America/Chicago] PHP Warning:  Undefined array key "pet_species" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php on line 38
+[08-Aug-2024 12:50:26 America/Chicago] PHP Warning:  Undefined array key "address" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php on line 39
+[08-Aug-2024 12:50:26 America/Chicago] PHP Warning:  Undefined array key "phone" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php on line 40
+[08-Aug-2024 12:50:26 America/Chicago] PHP Warning:  Undefined array key "password" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php on line 41
+[08-Aug-2024 12:50:26 America/Chicago] PHP Warning:  Undefined array key "login_users" in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php on line 43
+[08-Aug-2024 12:50:26 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php on line 43
+[08-Aug-2024 12:50:26 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home2/shahruk1/televet.spiderhuntstechnologies.com/assets/php/update_pet_profile.php on line 47
