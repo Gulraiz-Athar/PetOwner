@@ -1,5 +1,124 @@
 $( document ).ready(function() {
 
+    $(".generate_label").click(function() {
+        var invoice_id = $(this).attr('invoice_id');
+        $.ajax({
+          url: "assets/php/generate_label.php",
+          method: 'post',
+          data: {
+            'invoice_id': invoice_id,
+          },
+          success: function(data) {
+            //   console.log(data);
+            Swal.fire({
+              icon: "success",
+              title: "Congratulation",
+              text: "Label Generated Successfully!",
+            }).then((result) => {
+              // window.location.href="pet_owner_invoices.php?id="+petowner;
+              location.reload();
+            });
+          }
+        });
+      });
+
+    $(".send_invoice").click(function() {
+        var invoice_id = $(this).attr('invoice_id');
+        $.ajax({
+          url: "assets/php/vet_sending_mail.php",
+          method: 'post',
+          data: {
+            "invoice_id": invoice_id,
+          },
+          success: function(petowner) {
+            Swal.fire({
+              icon: "success",
+              title: "Congratulation",
+              text: "Invoice Sent Successfully!",
+            }).then((result) => {
+              // window.location.href="pet_owner_invoices.php?id="+petowner;
+              location.reload();
+            });
+          }
+        });
+      });
+
+    $("#user_role").change(function() {
+        var role = $(this).val();
+        if (role == "veterinarian") {
+          $(".veterian").show();
+          $(".pet_owner").hide();
+        } else {
+          $(".veterian").hide();
+          $(".pet_owner").show();
+        }
+      });
+
+    $("#petowner_id").change(function() {
+        var value = $(this).val();
+        if (value) {
+          $.ajax({
+            url: "assets/php/services.php",
+            method: 'post',
+            data: {
+              'flag': 'petowner_data',
+              'id': value,
+            },
+            success: function(data) {
+              var json = $.parseJSON(data);
+              var petowner_add = json.address;
+              $("#pet_owner_address").val(petowner_add);
+            }
+          });
+        } else {
+          $("#pet_owner_address").val('');
+        }
+      });
+      $(".create_invoice").click(function() {
+        $.ajax({
+          url: "assets/php/create_invoice.php",
+          method: 'post',
+          data: $('#create_invoice').serialize(),
+          success: function(petowner) {
+            Swal.fire({
+              icon: "success",
+              title: "Congratulation",
+              text: "Invoice Created Successfully!",
+            }).then((result) => {
+              window.location.href = "invoice_detail.php?id=" + petowner;
+            });
+          }
+        });
+      });
+
+
+$(".login_user").on("click", function (event) {
+    event.preventDefault();
+    var data = $('#login_user').serialize();
+
+    $.ajax({
+        method: "POST",
+        url: "assets/php/login_user.php",
+        data: data
+    }).done(function (d) {
+        if (d == "verified") {
+            Swal.fire({
+                title: "Good job!",
+                text: "You are Successfully login",
+                icon: "success"
+            }).then(function () {
+                window.location.assign("index.php")
+            });
+        } else if (d == "not verified") {
+            Swal.fire({
+                title: "Username And Password Is Incorrect or Require Admin Approval",
+                // text: "",
+                icon: "error"
+            });
+        }
+    });
+});
+
 $(".reset_pass").on("click", function(event){
 
     event.preventDefault(); 
