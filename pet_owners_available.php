@@ -1,29 +1,15 @@
 <?php
 session_start();
+check_session($_SESSION['material_user']);
 
-if (!isset($_SESSION['material_user'])) {
-    header('Location: auth-login.php');
-    exit();
-}
-
-include 'partials/main.php';
 ?> <head> <?php
     $title = "Pet Owners";
-    include 'partials/title-meta.php'; ?>
-  <!-- Plugins css -->
-  <link href="assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/datatables.net-select-bs5/css//select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" /> <?php include 'partials/head-css.php'; 
+    include 'partials/main.php';
+    include 'partials/title-meta.php';
+    include 'partials/head-css.php'; 
     include("services/database.php");
     include("assets/php/function.php");
-
-    $createvaterinaries = mysqli_query($conn,"SELECT * FROM `vetprofiles`");
-    $createpetowners = mysqli_query($conn,"SELECT * FROM `user` WHERE `role` = 'petowner'");
-
-
+    $petprofile = mysqli_query($conn,"SELECT * FROM `user` WHERE `role` = 'petowner'");
     ?>
 </head>
 <body>
@@ -72,21 +58,21 @@ include 'partials/main.php';
                         </tr>
                       </thead>
                       <tbody> <?php $i = 1;
-                          while ($petownersall = mysqli_fetch_assoc($createpetowners)) { ?> 
+                          while ($petprofiles = mysqli_fetch_assoc($petprofile)) { ?> 
                           <tr>
                           <td>
                             <h5 class="m-0 fw-normal"> <?php echo $i++ ?> </h5>
                           </td>
                           <td>
                             <h5 class="m-0 fw-normal">
-                              <a href="profile_view.php?id=<?php echo $petownersall['id']; ?>"> <?php echo $petownersall['name']; ?> </a>
+                              <a href="profile_view.php?id=<?php echo $petprofiles['id']; ?>"> <?php echo $petprofiles['name']; ?> </a>
                             </h5>
                           </td>
                           <td>
-                            <h5 class="m-0 fw-normal"> <?php echo $petownersall['email']; ?> </h5>
+                            <h5 class="m-0 fw-normal"> <?php echo $petprofiles['email']; ?> </h5>
                           </td>
                           <td>
-                            <a href="pet_owner_invoices.php?id=<?php echo $petownersall['id']; ?>">
+                            <a href="pet_owner_invoices.php?id=<?php echo $petprofiles['id']; ?>">
                               <i style="font-size:25px;color:grey;" class="mdi mdi-eye"></i>
                             </a>
                           </td>
@@ -111,25 +97,5 @@ include 'partials/main.php';
     <!-- ============================================================== -->
   </div>
   <!-- END wrapper --> <?php include 'partials/right-sidebar.php'; ?> <?php include 'partials/footer-scripts.php'; ?>
-  <!-- Plugins js-->
-  <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-  <script src="assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
-  <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-  <script src="assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-  <script src="assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-  <script src="assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
-  <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
-  <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/libs/selectize/js/standalone/selectize.min.js"></script>
-  <!-- Dashboar 1 init js-->
-  <script src="assets/js/pages/datatables.init.js"></script>
-  <script src="assets/libs/sweetalert2/sweetalert2.all.min.js"></script>
-  <!-- Dashboar 1 init js-->
-  <script src="assets/js/pages/authentication.init.js"></script>
 </body>
 </html>

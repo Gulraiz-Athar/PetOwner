@@ -1,10 +1,6 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['material_user'])) {
-    header('Location: auth-login.php');
-    exit();
-}
+check_session($_SESSION['material_user']);
 
 $id = $_GET['id'];
 
@@ -30,7 +26,8 @@ include 'partials/main.php'; ?> <head> <?php
               <form action="assets/php/update_vet_profile.php" method="post" enctype="multipart/form-data">
                 <div class="card text-center">
                   <div class="card-body">
-                    <img src="assets/images/<?php echo get_result($conn,$id, 'user')['image']; ?>" class="rounded-circle avatar-lg img-thumbnail" style="width:50%;height:200px;" alt="profile-image">
+                    <img src="assets/images/<?php echo get_result($conn,$id, 'user')['image']; ?>" 
+                    class="rounded-circle avatar-lg img-thumbnail" style="width:50%;height:200px;" alt="profile-image">
                     <input type="hidden" name="flag" value="update_image">
                     <h4 class="mb-0"> <?php echo $_GET['name']; ?> </h4>
                     <div class="text-start mt-3"></div>
@@ -139,9 +136,6 @@ include 'partials/main.php'; ?> <head> <?php
         <!-- container -->
       </div>
       <!-- content --> <?php include 'partials/footer.php'; ?> </div>
-    <!-- ============================================================== -->
-    <!-- End Page content -->
-    <!-- ============================================================== -->
   </div>
   <!-- END wrapper --> <?php include 'partials/right-sidebar.php'; ?> <?php include 'partials/footer-scripts.php'; ?>
 </body>

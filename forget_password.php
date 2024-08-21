@@ -35,13 +35,14 @@ $user_id = $row_user_data['user_id'];
               <form action="#" method="post">
                 <div class="mb-3">
                   <label for="password" class="form-label">New Password</label>
-                  <input class="form-control" type="password" id="new_password" name="new_password" required="" placeholder="Enter new password">
+                  <input class="form-control" type="password" id="new_password" name="new_password"
+                   required placeholder="Enter new password">
                 </div>
                 <div class="mb-3">
                   <label for="confirm_new_password" class="form-label">Confirm New Password</label>
-                  <input class="form-control" type="password" id="confirm_new_password" name="confirm_new_password" required="" placeholder="Enter password again">
-                  <input type="hidden" name="user_id" id="user_id" value="
-														<?php echo $user_id; ?>">
+                  <input class="form-control" type="password" id="confirm_new_password" name="confirm_new_password" required
+                   placeholder="Enter password again">
+                  <input type="hidden" name="user_id" id="user_id" value="<?= $user_id; ?>">
                 </div>
                 <div class="text-center d-grid">
                   <button class="btn btn-primary update_pass" name="update_pass" type="button"> Reset Password </button>
@@ -73,9 +74,6 @@ $user_id = $row_user_data['user_id'];
       document.write(new Date().getFullYear())
     </script> &copy; Televet <a href="" class="text-white-50">Spiderhunts</a>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <!-- Authentication js -->
-  <script src="assets/js/pages/authentication.init.js"></script>
+  <?php include 'partials/footer-scripts.php'; ?>
 </body>
 </html>

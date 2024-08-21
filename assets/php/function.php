@@ -5,7 +5,22 @@ function get_result($conn,$id,$table){
     return $query;
 }
 
+function check_session($session){
+    if (!isset($session)) {
+        header('Location: auth-login.php');
+        exit();
+    }
+}
 
+function current_date($date){
+    $old_date_timestamp = strtotime($date);
+    echo date('Y/m/d', $old_date_timestamp);
+}
+
+function exp_date($date){
+    $old_date_timestamp = strtotime($date);
+    echo date('Y/m/d', $old_date_timestamp);
+}
 
 function get_result_users($conn,$id){
     $query = mysqli_fetch_assoc(mysqli_query($conn,"SELECT * FROM `user_info` WHERE `user_id` = '$id'"));

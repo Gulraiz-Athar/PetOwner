@@ -1,5 +1,14 @@
 $( document ).ready(function() {
 
+    function togglePasswordVisibility() {
+        var passwordField = document.getElementById("password");
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+        } else {
+          passwordField.type = "password";
+        }
+      }
+
     $(".generate_label").click(function() {
         var invoice_id = $(this).attr('invoice_id');
         $.ajax({
@@ -42,6 +51,17 @@ $( document ).ready(function() {
           }
         });
       });
+
+    $("#role").change(function() {
+        var role = $(this).val();
+        if (role == "veterinarian") {
+          $(".veterian").show();
+          $(".pet_owner").hide();
+        } else {
+          $(".veterian").hide();
+          $(".pet_owner").show();
+        }
+    });
 
     $("#user_role").change(function() {
         var role = $(this).val();

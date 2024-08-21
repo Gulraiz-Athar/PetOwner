@@ -1,47 +1,17 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['material_user'])) {
-    header('Location: auth-login.php');
-    exit();
-}
-
+check_session($_SESSION['material_user']);
 include 'partials/main.php';
 ?> <head> <?php
     $title = "Invoices";
-    include 'partials/title-meta.php'; ?>
-  <!-- Plugins css -->
-  <link href="assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/datatables.net-select-bs5/css//select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" /> <?php include 'partials/head-css.php'; 
+    include 'partials/title-meta.php'; 
+    include 'partials/head-css.php'; 
     include("services/database.php");
-    include("assets/php/function.php");
-    $createvaterinaries = mysqli_query($conn,"SELECT * FROM `vetprofiles`");
-    $createpetowners = mysqli_query($conn,"SELECT * FROM `petowners`");
-    ?>
+    include("assets/php/function.php"); ?>
 </head>
-<script>
-  function togglePasswordVisibility() {
-    var passwordField = document.getElementById("password");
-    // var eyeIcon = document.getElementById("eye-icon");
-    if (passwordField.type === "password") {
-      passwordField.type = "text";
-      // eyeIcon.className = "fa fa-eye-slash";
-    } else {
-      passwordField.type = "password";
-      // eyeIcon.className = "fa fa-eye";
-    }
-  }
-</script>
 <body>
   <!-- Begin page -->
   <div id="wrapper"> <?php include 'partials/menu.php'; ?>
-    <!-- ============================================================== -->
-    <!-- Start Page Content here -->
-    <!-- ============================================================== -->
     <div class="content-page"> <?php include 'partials/topbar.php'; ?> <div class="content">
         <!-- Start Content-->
         <div class="container-fluid">
@@ -64,7 +34,7 @@ include 'partials/main.php';
                       <div class="col-md-4">
                         <div class="mb-3">
                           <label for="fullname" class="form-label">Full Name</label>
-                          <input class="form-control" type="text" placeholder="Enter your name" name="fullname" required="">
+                          <input class="form-control" type="text" placeholder="Enter your name" name="fullname" required>
                         </div>
                         <div class="mb-3">
                           <label for="country" class="form-label">Country</label>
@@ -326,7 +296,8 @@ include 'partials/main.php';
                         <div class="mb-3">
                           <label for="password" class="form-label">Password</label>
                           <div class="input-group input-group-merge">
-                            <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password" required="">
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                             name="password" required="">
                             <div class="input-group-text" data-password="false">
                               <span class="password-eye" onclick="togglePasswordVisibility()"></span>
                             </div>
@@ -334,11 +305,12 @@ include 'partials/main.php';
                         </div>
                         <div class="mb-3 veterian">
                           <label for="pharmacy_name" class="form-label ">Pharmacy Name</label>
-                          <input class="form-control" type="text" placeholder="Enter your pharmacy name" name="pharmacy_name" required="">
+                          <input class="form-control" type="text" placeholder="Enter your pharmacy name"
+                           name="pharmacy_name">
                         </div>
                         <div class="mb-3 pet_owner" style="display:none;">
                           <label for="pets_number" class="form-label">No of Pets</label>
-                          <input class="form-control" type="text" placeholder="" name="pets_number" required="">
+                          <input class="form-control" type="text" placeholder="" name="pets_number" required>
                         </div>
                         <div class="mb-3 pet_owner" style="display:none;">
                           <div class="form-check">
@@ -349,7 +321,8 @@ include 'partials/main.php';
                         <div class="mb-3 veterian">
                           <div class="form-check">
                             <input type="checkbox" class="form-check-input" name="checkbox_signup">
-                            <label class="form-check-label" for="checkbox-signup">I am authorized by VCBC to prescribe</label>
+                            <label class="form-check-label" for="checkbox-signup">
+                              I am authorized by VCBC to prescribe</label>
                           </div>
                         </div>
                       </div>
@@ -360,19 +333,19 @@ include 'partials/main.php';
                         </div>
                         <div class="mb-3">
                           <label for="province" class="form-label">Province</label>
-                          <input class="form-control" type="text" placeholder="Enter your province" name="province" required="">
+                          <input class="form-control" type="text" placeholder="Enter your province" name="province" required>
                         </div>
                         <div class="mb-3">
                           <label for="postal_code" class="form-label">Postal Code</label>
-                          <input class="form-control" type="text" placeholder="Enter your Postal Code" name="postal_code" required="">
+                          <input class="form-control" type="text" placeholder="Enter your Postal Code" name="postal_code" required>
                         </div>
                         <div class="mb-3 veterian">
                           <label for="pharmacy_code" class="form-label ">Pharmacy Postal Code</label>
-                          <input class="form-control" type="text" placeholder="" name="pharmacy_code" required="">
+                          <input class="form-control" type="text" placeholder="" name="pharmacy_code" required>
                         </div>
                         <div class="mb-3 pet_owner" style="display:none;">
                           <label for="pet_species" class="form-label">Pets Species</label>
-                          <input class="form-control" type="text" placeholder="" name="pet_species" required="">
+                          <input class="form-control" type="text" placeholder="" name="pet_species" required>
                         </div>
                         <div class="col-md-12">
                           <div class="form-check">
@@ -385,7 +358,7 @@ include 'partials/main.php';
                       <div class="col-md-4">
                         <div class="mb-3">
                           <label for="city" class="form-label">City</label>
-                          <input class="form-control" type="text" placeholder="Enter your city" name="city" required="">
+                          <input class="form-control" type="text" placeholder="Enter your city" name="city" required>
                         </div>
                         <div class="mb-3">
                           <label for="phone" class="form-label">Phone</label>
@@ -402,15 +375,17 @@ include 'partials/main.php';
                         </div>
                         <div class="mb-3 veterian">
                           <label for="pharmacy_address" class="form-label ">Pharmacy Address</label>
-                          <input class="form-control" type="text" placeholder="Enter your pharmacy address" name="pharmacy_address" required="">
+                          <input class="form-control" type="text" placeholder="Enter your pharmacy address"
+                           name="pharmacy_address" required>
                         </div>
                         <div class="mb-3 pet_owner" style="display:none;">
                           <label for="address" class="form-label">Address</label>
-                          <input class="form-control" type="text" placeholder="Enter your address" name="address" required="">
+                          <input class="form-control" type="text" placeholder="Enter your address" name="address" required>
                         </div>
                       </div>
                       <div class="text-center d-grid">
-                        <button type="button" class="btn btn-success submit_register_user_from_admin" name="submit_register"> Create User</button>
+                        <button type="button" class="btn btn-success submit_register_user_from_admin" 
+                        name="submit_register"> Create User</button>
                       </div>
                     </div>
                   </div>
@@ -425,32 +400,7 @@ include 'partials/main.php';
         <!-- container -->
       </div>
       <!-- content --> <?php include 'partials/footer.php'; ?> </div>
-    <!-- ============================================================== -->
-    <!-- End Page content -->
-    <!-- ============================================================== -->
   </div>
   <!-- END wrapper --> <?php include 'partials/right-sidebar.php'; ?> <?php include 'partials/footer-scripts.php'; ?>
-  <!-- Plugins js-->
-  <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-  <script src="assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
-  <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-  <script src="assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-  <script src="assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-  <script src="assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
-  <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
-  <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/libs/selectize/js/standalone/selectize.min.js"></script>
-  <!-- Dashboar 1 init js-->
-  <script src="assets/js/pages/datatables.init.js"></script>
-  <script src="assets/libs/sweetalert2/sweetalert2.all.min.js"></script>
-  <!-- Dashboar 1 init js-->
-  <script src="assets/js/pages/authentication.init.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  
 </body>
 </html>

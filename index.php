@@ -1,9 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['login_users'])) {
-    header('Location: auth-login.php');
-    exit();
-}
+check_session($_SESSION['material_user']);
 
 if ($_SESSION['login_users']['role'] == "petowner" ) {
     header('Location:vet_invoices.php');
@@ -44,7 +41,8 @@ $users = mysqli_query($conn, "SELECT * FROM `user` WHERE `role` = 'petowner'");
             </div>
           </div>
           <!-- end page title -->
-          <div class="row"> <?php if($_SESSION['login_users']['role'] == "veterinarian"){ ?> <div class="col-md-6 col-xl-4">
+          <div class="row"> <?php if($_SESSION['login_users']['role'] == "veterinarian"){ ?> 
+            <div class="col-md-6 col-xl-4">
               <div class="widget-rounded-circle card">
                 <div class="card-body">
                   <div class="row">
@@ -69,7 +67,8 @@ $users = mysqli_query($conn, "SELECT * FROM `user` WHERE `role` = 'petowner'");
               </div>
               <!-- end widget-rounded-circle-->
             </div>
-            <!-- end col--> <?php }else if($_SESSION['login_users']['role'] == "petowner"){ ?> <div class="col-md-6 col-xl-4">
+            <!-- end col--> <?php }else if($_SESSION['login_users']['role'] == "petowner"){ ?> 
+              <div class="col-md-6 col-xl-4">
               <div class="widget-rounded-circle card">
                 <div class="card-body">
                   <div class="row">
@@ -115,7 +114,8 @@ $users = mysqli_query($conn, "SELECT * FROM `user` WHERE `role` = 'petowner'");
               </div>
               <!-- end widget-rounded-circle-->
             </div>
-            <!-- end col--> <?php } ?> <div class="col-md-6 col-xl-4">
+            <!-- end col--> <?php } ?> 
+             <div class="col-md-6 col-xl-4">
               <div class="widget-rounded-circle card">
                 <div class="card-body">
                   <div class="row">
@@ -160,21 +160,21 @@ $users = mysqli_query($conn, "SELECT * FROM `user` WHERE `role` = 'petowner'");
                     </div> <?php if($_SESSION['login_users']['role'] == "veterinarian"){ ?> <div class="col-6">
                       <div class="text-end">
                         <h3 class="text-dark mt-1">
-                          <span data-plugin="counterup"> <?php echo get_invoice_count($conn, $id); ?> </span>
+                          <span data-plugin="counterup"> <?= get_invoice_count($conn, $id); ?> </span>
                         </h3>
                         <p class="text-muted mb-1 text-truncate">Invoices</p>
                       </div>
                     </div> <?php }else if($_SESSION['login_users']['role'] == "petowner"){ ?> <div class="col-6">
                       <div class="text-end">
                         <h3 class="text-dark mt-1">
-                          <span data-plugin="counterup"> <?php echo get_invoice_count_petowner($conn, $id); ?> </span>
+                          <span data-plugin="counterup"> <?= get_invoice_count_petowner($conn, $id); ?> </span>
                         </h3>
                         <p class="text-muted mb-1 text-truncate">Invoices</p>
                       </div>
                     </div> <?php }else{ ?> <div class="col-6">
                       <div class="text-end">
                         <h3 class="text-dark mt-1">
-                          <span data-plugin="counterup"> <?php echo get_invoice_count_admin($conn, $id); ?> </span>
+                          <span data-plugin="counterup"> <?= get_invoice_count_admin($conn); ?> </span>
                         </h3>
                         <p class="text-muted mb-1 text-truncate">Invoices</p>
                       </div>
@@ -193,7 +193,8 @@ $users = mysqli_query($conn, "SELECT * FROM `user` WHERE `role` = 'petowner'");
               <div class="card">
                 <div class="card-body">
                   <div class="dropdown float-end">
-                    <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" 
+                      aria-expanded="false">
                       <i class="mdi mdi-dots-vertical"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end">
@@ -212,7 +213,8 @@ $users = mysqli_query($conn, "SELECT * FROM `user` WHERE `role` = 'petowner'");
                     <div id="total-revenue" class="mt-0" data-colors="#f1556c"></div>
                     <h5 class="text-muted mt-0">Total sales made today</h5>
                     <h2>$ <?php echo get_revenue_count_day($conn, $id);?> </h2>
-                    <p class="text-muted w-75 mx-auto sp-line-2">Traditional heading elements are designed to work best in the meat of your page content.</p>
+                    <p class="text-muted w-75 mx-auto sp-line-2">Traditional heading elements are designed to 
+                      work best in the meat of your page content.</p>
                     <div class="row mt-3">
                     </div>
                   </div>
@@ -240,7 +242,8 @@ $users = mysqli_query($conn, "SELECT * FROM `user` WHERE `role` = 'petowner'");
               <div class="card">
                 <div class="card-body">
                   <div class="dropdown float-end">
-                    <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" 
+                    aria-expanded="false">
                       <i class="mdi mdi-dots-vertical"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end">
@@ -262,7 +265,6 @@ $users = mysqli_query($conn, "SELECT * FROM `user` WHERE `role` = 'petowner'");
                           <th>Expires</th>
                           <th>Total Invoice</th>
                           <th>Status</th>
-                          <!--<th>Action</th>-->
                         </tr>
                       </thead>
                       <tbody> <?php while($row_users = mysqli_fetch_assoc($users)){ ?> <tr>
@@ -271,19 +273,13 @@ $users = mysqli_query($conn, "SELECT * FROM `user` WHERE `role` = 'petowner'");
                               <a href="profile_view.php?id=<?php echo $row_users['id']; ?>"> <?php echo $row_users['name']; ?> </a>
                             </h5>
                           </td>
-                          <td> <?php $date = $row_users['created_at'];
-                                     $old_date_timestamp = strtotime($date);
-                                     echo $new_date = date('Y/m/d', $old_date_timestamp); 
-                           ?> </td>
-                          <td> <?php $date = $row_users['created_at'];
-                                     $old_date_timestamp = strtotime($date. ' + 3 days');
-                                     echo $new_date = date('Y/m/d', $old_date_timestamp); 
-                                ?> </td>
+                          <td> <?php current_date($row_users['created_at']);?> </td>
+                          <td> <?php exp_date($row_users['created_at']);?> </td>
                           <td> <?php echo get_pet_owners_invoices_count($conn, $row_users['id']); ?> </td>
                           <td>
                             <span class="badge bg-soft-warning text-warning">Pending</span>
                           </td>
-                        </tr> <?php     } ?> 
+                        </tr> <?php } ?> 
                     </tbody>
                     </table>
                   </div>
@@ -292,19 +288,22 @@ $users = mysqli_query($conn, "SELECT * FROM `user` WHERE `role` = 'petowner'");
               </div>
               <!-- end card-->
             </div>
-            <!-- end col --> <?php if($_SESSION['login_users']['role'] == 'veterinarian'){ ?> <div class="col-xl-6">
+            <!-- end col --> <?php if($_SESSION['login_users']['role'] == 'veterinarian'){ ?> 
+              <div class="col-xl-6">
               <div class="card">
                 <div class="card-body" style="text-align:center;overflow-y: scroll;height: 348px;">
                   <h4 class="header-title mb-3">Notification History</h4> <?php  
-                    $trans_vet = mysqli_query($conn, "SELECT * FROM `transactions` WHERE `veterinarian_id` = '$id' GROUP by `created` DESC;");
+                    $trans_vet = mysqli_query($conn, "SELECT * FROM `transactions`
+                     WHERE `veterinarian_id` = '$id' GROUP by `created` DESC;");
                     while($row_trans = mysqli_fetch_assoc($trans_vet)){
-                        
                         $user_id = $row_trans['user_id'];
                         $amount = $row_trans['paid_amount'];
                         $invoice_id = $row_trans['invoice_id'];
-                        
                         ?> <br> <br> <br>
-                        <a href="invoice_detail.php?id=<?php echo $invoice_id; ?>" style="border: 1px solid #212136;padding: 8px;font-size: 15px;color: #092D48;background: #5EC1CE;border-radius: 7px;"> <?php echo get_result($conn,$user_id,'user')['name']; ?> have successfuly paid invoice no $ <?php echo $invoice_id; ?>. </a>
+                        <a href="invoice_detail.php?id=<?php echo $invoice_id; ?>" 
+                        style="border: 1px solid #212136;padding: 8px;font-size: 15px;color: #092D48;background: #5EC1CE;border-radius: 7px;">
+                         <?php echo get_result($conn,$user_id,'user')['name']; ?> have successfuly paid invoice no $ 
+                         <?php echo $invoice_id; ?>. </a>
                         <br> <br> <br> 
                     <?php } ?>
 
@@ -312,7 +311,8 @@ $users = mysqli_query($conn, "SELECT * FROM `user` WHERE `role` = 'petowner'");
               </div>
               <!-- end card-->
             </div>
-            <!-- end col --> <?php }else if($_SESSION['login_users']['role'] == 'admin') { ?> <div class="col-xl-6">
+            <!-- end col --> <?php }else if($_SESSION['login_users']['role'] == 'admin') { ?> 
+              <div class="col-xl-6">
               <div class="card">
                 <div class="card-body" style="text-align:center;overflow-y: scroll;height: 300px;">
                   <h4 class="header-title mb-3">Notification History</h4> <?php
@@ -321,33 +321,25 @@ $users = mysqli_query($conn, "SELECT * FROM `user` WHERE `role` = 'petowner'");
                         $user_id = $row_trans['user_id'];
                         $amount = $row_trans['paid_amount'];
                         $invoice_id = $row_trans['invoice_id'];
-                        
                         ?> <br> <br> <br>
-                            <a href="invoice_detail.php?id=<?php echo $invoice_id; ?>" style="border: 1px solid #212136;padding: 8px;font-size: 15px;color: #092D48;background: #5EC1CE;border-radius: 7px;"> <?php echo get_result($conn,$user_id,'user')['name']; ?> have successfuly paid invoice no <?php echo $invoice_id; ?>. </a>
+                            <a href="invoice_detail.php?id=<?php echo $invoice_id; ?>" 
+                            style="border: 1px solid #212136;padding: 8px;font-size: 15px;color: #092D48;background: #5EC1CE;border-radius: 7px;">
+                             <?php echo get_result($conn,$user_id,'user')['name']; ?> 
+                             have successfuly paid invoice no <?php echo $invoice_id; ?>. </a>
                             <br ><br>
                     <br> <?php } ?>
                 </div>
               </div>
               <!-- end card-->
             </div>
-            <!-- end col --> <?php }
-                        ?>
+            <!-- end col --> <?php } ?>
           </div>
           <!-- end row -->
         </div>
         <!-- container -->
       </div>
       <!-- content --> <?php include 'partials/footer.php'; ?> </div>
-    <!-- ============================================================== -->
-    <!-- End Page content -->
-    <!-- ============================================================== -->
   </div>
   <!-- END wrapper --> <?php include 'partials/right-sidebar.php'; ?> <?php include 'partials/footer-scripts.php'; ?>
-  <!-- Plugins js-->
-  <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
-  <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/libs/selectize/js/standalone/selectize.min.js"></script>
-  <!-- Dashboar 1 init js-->
-  <script src="assets/js/pages/dashboard-1.init.js"></script>
 </body>
 </html>

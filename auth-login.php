@@ -7,8 +7,6 @@ require_once('services/database.php');
   <?php
     $title = "Log In";
     include 'partials/title-meta.php'; ?>
-  <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
   <?php include 'partials/head-css.php'; ?>
 </head>
 <body class="authentication-bg authentication-bg-pattern">
@@ -36,12 +34,14 @@ require_once('services/database.php');
               <form method="POST" id="login_user">
                 <div class="mb-3">
                   <label for="emailaddress" class="form-label">Email address</label>
-                  <input class="form-control" type="email" id="emailaddress" placeholder="Enter your email" name="email" value="">
+                  <input class="form-control" type="email" id="emailaddress" placeholder="Enter your email"
+                   name="email" value="">
                 </div>
                 <div class="mb-3">
                   <label for="password" class="form-label">Password</label>
                   <div class="input-group input-group-merge">
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password">
+                    <input type="password" id="password" name="password" class="form-control" 
+                    placeholder="Enter your password">
                     <div class="input-group-text" data-password="false">
                       <span class="password-eye" onclick="togglePasswordVisibility()"></span>
                     </div>

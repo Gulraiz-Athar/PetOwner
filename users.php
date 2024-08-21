@@ -1,25 +1,15 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['material_user'])) {
-    header('Location: auth-login.php');
-    exit();
-}
+check_session($_SESSION['material_user']);
 
 include 'partials/main.php';
 ?> <head> <?php
     $title = "Users";
-    include 'partials/title-meta.php'; ?>
-  <!-- Plugins css -->
-  <link href="assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/datatables.net-select-bs5/css//select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" /> <?php include 'partials/head-css.php'; 
+    include 'partials/title-meta.php';
+    include 'partials/head-css.php'; 
     include("services/database.php");
     include("assets/php/function.php");
-    $users = mysqli_query($conn,"SELECT * FROM `user` WHERE role != 'admin'");
+    $user = mysqli_query($conn,"SELECT * FROM `user` WHERE role != 'admin'");
     ?>
 </head>
 <body>
@@ -61,23 +51,25 @@ include 'partials/main.php';
                       </thead>
                       <tbody> <?php    
                             $is_paid = true;
-                            while($row = mysqli_fetch_assoc($users)){
+                            while($row_users = mysqli_fetch_assoc($user)){
                             ?> <tr>
                           <td>
-                            <h5 class="m-0 fw-normal"> <?=$row['name']?> </h5>
+                            <h5 class="m-0 fw-normal"> <?=$row_users['name']?> </h5>
                             <p class="mb-0 text-muted">
                               <small>
-                                <a href="mailto:<?=$row['email']?>"> <?=$row['email']?> </a>
+                                <a href="mailto:<?=$row_users['email']?>"> <?=$row_users['email']?> </a>
                               </small>
                             </p>
                           </td>
-                          <td> <?php if(ucfirst($row['role'] == "petowner")){ ?> <p>Pet Owner</p> <?php }else{ echo ucfirst($row['role']);  } ?> </td>
+                          <td> <?php if(ucfirst($row_users['role'] == "petowner")){ ?> <p>Pet Owner</p> <?php }
+                              else{ echo ucfirst($row_users['role']);  } ?> </td>
                           <td>
-                            <?php if($row['is_enable'] == 1){ ?> <span class="badge bg-soft-success text-success">Active</span> <?php }else{ ?> <span class="badge bg-soft-danger text-danger">Not Active</span> <?php } ?>
+                            <?php if($row_users['is_enable'] == 1){ ?> <span class="badge bg-soft-success text-success">Active</span> <?php }
+                            else{ ?> <span class="badge bg-soft-danger text-danger">Not Active</span> <?php } ?>
                           </td>
-                          <td> <?=$row['created_at']?> </td>
+                          <td> <?=$row_users['created_at']?> </td>
                           <td>
-                            <a href="users_invoices.php?id=<?php echo $row['id']; ?>">
+                            <a href="users_invoices.php?id=<?php echo $row_users['id']; ?>">
                               <i style="font-size:25px;color:grey;" class="mdi mdi-eye"></i>
                             </a>
                           </td>
@@ -97,76 +89,12 @@ include 'partials/main.php';
         <!-- container -->
       </div>
       <!-- content -->
-      <div id="editnewinvoice" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title" id="standard-modalLabel"></h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-4">
-              <form id="invoice_create" method="POST">
-                <div class="mb-3">
-                  <label for="fullname" class="form-label">Invoice No</label>
-                  <input class="form-control" type="text" placeholder="Enter your invoice no" name="invoiceno" required>
-                </div>
-                <div class="mb-3">
-                  <label for="" class="form-label">Select Veterinary</label>
-                  <select name="veterinary_id" id="" class="form-control"> <?php
-                    while($vaternaryall = mysqli_fetch_assoc($createvaterinaries)){
-                    ?> <option value="<?=$vaternaryall['id']?>"> <?=$vaternaryall['name']?> </option> <?php
-                    }
-                    ?> </select>
-                </div>
-                <div class="mb-3">
-                  <label for="" class="form-label">Select Pet Owner</label>
-                  <select name="petowner_id" id="" class="form-control"> <?php
-                    while($petownerall = mysqli_fetch_assoc($createpetowners)){
-                    ?> <option value="<?=$petownerall['id']?>"> <?=$petownerall['name']?> </option> <?php
-                    }
-                    ?> </select>
-                </div>
-                <div class="mb-3">
-                  <label for="" class="form-label">Veterinary Paid</label>
-                  <input class="form-control" type="number" placeholder="Enter your vaterinary paid amount less than $127" name="vaterinary" required="">
-                </div>
-                <div class="mb-3">
-                  <label for="fullname" class="form-label">Petowners Paid</label>
-                  <input class="form-control" type="number" placeholder="Enter your petowners paid amount " name="petowner" required="">
-                </div>
-                <div class="text-center d-grid">
-                  <button class="btn btn-success submit_invoice" name="submit_invoice"> Create New Invoice</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div> <?php include 'partials/footer.php'; ?>
+      <?php include 'partials/footer.php'; ?>
     </div>
     <!-- ============================================================== -->
     <!-- End Page content -->
     <!-- ============================================================== -->
   </div>
   <!-- END wrapper --> <?php include 'partials/right-sidebar.php'; ?> <?php include 'partials/footer-scripts.php'; ?>
-  <!-- Plugins js-->
-  <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-  <script src="assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
-  <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-  <script src="assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-  <script src="assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-  <script src="assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
-  <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
-  <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/libs/selectize/js/standalone/selectize.min.js"></script>
-  <!-- Dashboar 1 init js-->
-  <script src="assets/js/pages/datatables.init.js"></script>
-  <script src="assets/libs/sweetalert2/sweetalert2.all.min.js"></script>
-  <!-- Dashboar 1 init js-->
-  <script src="assets/js/pages/authentication.init.js"></script>
 </body>
 </html>

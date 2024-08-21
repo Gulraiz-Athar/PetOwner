@@ -1,6 +1,8 @@
-<?php include 'partials/main.php'; ?> <head> <?php
+<?php include 'partials/main.php'; ?> 
+<head> <?php
     $title = "Logout";
-    include 'partials/title-meta.php'; ?> <?php include 'partials/head-css.php'; ?> </head>
+    include 'partials/title-meta.php'; ?> <?php include 'partials/head-css.php'; ?> 
+</head>
 <body class="authentication-bg authentication-bg-pattern">
   <div class="account-pages mt-5 mb-5">
     <div class="container">
@@ -32,10 +34,10 @@
                   </div>
                 </div>
                 <h3>See you again <?=ucfirst($_SESSION['material_user']['name'])?>! </h3> <?php
-                                    unset($_SESSION['material_user']);
-                                    unset($_SESSION['login_users']);
-                                    session_destroy ();
-                                    ?> <p class="text-muted"> You are now successfully sign out. </p>
+                    unset($_SESSION['material_user']);
+                    unset($_SESSION['login_users']);
+                    session_destroy ();
+                    ?> <p class="text-muted"> You are now successfully sign out. </p>
               </div>
             </div>
             <!-- end card-body -->

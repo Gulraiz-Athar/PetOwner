@@ -1,12 +1,9 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['material_user'])) {
-    header('Location: auth-login.php');
-    exit();
-}
+check_session($_SESSION['material_user']);
 
 $id = $_SESSION['login_users']['id'];
+
 include('assets/php/function.php');
 include('services/database.php');
 include 'partials/main.php'; ?> <head> <?php
@@ -21,16 +18,17 @@ include 'partials/main.php'; ?> <head> <?php
     <div class="content-page"> <?php include 'partials/topbar.php'; ?> <div class="content">
         <!-- Start Content-->
         <div class="container-fluid"> <?php
-                    $sub_title = "Contacts";
-                    $title = "Profile";
-                    include 'partials/page-title.php'; ?>
+            $sub_title = "Contacts";
+            $title = "Profile";
+            include 'partials/page-title.php'; ?>
           <!-- end page title -->
           <div class="row">
             <div class="col-lg-4 col-xl-4">
               <form action="assets/php/update_pet_profile.php" method="post" enctype="multipart/form-data">
                 <div class="card text-center">
                   <div class="card-body">
-                    <img src="assets/images/<?php echo get_result($conn,$id, 'user')['image']; ?>" class="rounded-circle avatar-lg img-thumbnail" alt="profile-image">
+                    <img src="assets/images/<?php echo get_result($conn,$id, 'user')['image']; ?>" 
+                    class="rounded-circle avatar-lg img-thumbnail" alt="profile-image">
                     <input type="hidden" name="flag" value="update_image">
                     <h4 class="mb-0"> <?php echo $_SESSION['login_users']['name']; ?> </h4>
                     <div class="text-start mt-3">
@@ -73,13 +71,15 @@ include 'partials/main.php'; ?> <head> <?php
                           <div class="col-md-6">
                             <div class="mb-3">
                               <label for="name" class="form-label">Name</label>
-                              <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="<?php echo get_result($conn,$id, 'user')['name']; ?>">
+                              <input type="text" class="form-control" id="name" name="name" 
+                              placeholder="Enter name" value="<?php echo get_result($conn,$id, 'user')['name']; ?>">
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="mb-3">
                               <label for="useremail" class="form-label">Email Address</label>
-                              <input type="email" class="form-control" id="useremail" readonly placeholder="<?php echo get_result($conn,$id, 'user')['email']; ?>">
+                              <input type="email" class="form-control" id="useremail" readonly 
+                              placeholder="<?php echo get_result($conn,$id, 'user')['email']; ?>">
                             </div>
                           </div>
                         </div>
@@ -88,13 +88,15 @@ include 'partials/main.php'; ?> <head> <?php
                           <div class="col-md-6">
                             <div class="mb-3">
                               <label for="pets_number" class="form-label">Pets Number</label>
-                              <input type="text" class="form-control" id="pets_number" name="pets_number" placeholder="" value="<?php echo get_result_users($conn,$id)['pets_number']; ?>">
+                              <input type="text" class="form-control" id="pets_number" name="pets_number" 
+                              placeholder="" value="<?php echo get_result_users($conn,$id)['pets_number']; ?>">
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="mb-3">
                               <label for="pet_species" class="form-label">Pet Species</label>
-                              <input type="text" class="form-control" id="pet_species" name="pet_species" placeholder="" value="<?php echo get_result_users($conn,$id)['pet_species']; ?>">
+                              <input type="text" class="form-control" id="pet_species" name="pet_species" 
+                              placeholder="" value="<?php echo get_result_users($conn,$id)['pet_species']; ?>">
                             </div>
                           </div>
                           <!-- end col -->
@@ -104,14 +106,15 @@ include 'partials/main.php'; ?> <head> <?php
                           <div class="col-md-6">
                             <div class="mb-3">
                               <label for="useremail" class="form-label">Address</label>
-                              <input type="text" class="form-control" id="address" name="address" placeholder="" value="<?php echo get_result_users($conn,$id)['address']; ?>">
+                              <input type="text" class="form-control" id="address" name="address" placeholder="" 
+                              value="<?php echo get_result_users($conn,$id)['address']; ?>">
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="mb-3">
                               <label for="password" class="form-label">Password</label>
-                              <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" value="
-																																		<?php echo get_result($conn,$id, 'user')['password']; ?>">
+                              <input type="password" class="form-control" id="password" name="password" 
+                              placeholder="Enter password" value="<?= get_result($conn,$id, 'user')['password']; ?>">
                               <input type="hidden" name="flag" value="update_profile">
                             </div>
                           </div>
@@ -379,32 +382,32 @@ include 'partials/main.php'; ?> <head> <?php
                           <div class="col-md-6">
                             <div class="mb-3">
                               <label for="city" class="form-label">City</label>
-                              <input type="text" class="form-control" id="city" name="city" placeholder="" value="
-																																				<?php echo get_result_users($conn,$id)['city']; ?>">
+                              <input type="text" class="form-control" id="city" name="city" placeholder="" 
+                              value="<?= get_result_users($conn,$id)['city']; ?>">
                             </div>
                           </div>
                           <!-- end col -->
                           <div class="col-md-6">
                             <div class="mb-3">
                               <label for="province" class="form-label">Province</label>
-                              <input type="text" class="form-control" id="province" name="province" placeholder="" value="
-																																					<?php echo get_result_users($conn,$id)['province']; ?>">
+                              <input type="text" class="form-control" id="province" name="province" placeholder="" 
+                              value="<?= get_result_users($conn,$id)['province']; ?>">
                             </div>
                           </div>
                           <!-- end col -->
                           <div class="col-md-6">
                             <div class="mb-3">
                               <label for="postal_code" class="form-label">Postal Code</label>
-                              <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="" value="
-																																						<?php echo get_result_users($conn,$id)['postal_code']; ?>">
+                              <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="" 
+                              value="<?= get_result_users($conn,$id)['postal_code']; ?>">
                             </div>
                           </div>
                           <!-- end col -->
                           <div class="col-md-6">
                             <div class="mb-3">
                               <label for="phone" class="form-label">Phone</label>
-                              <input type="text" class="form-control" id="phone" name="phone" placeholder="" value="
-																																							<?php echo get_result($conn,$id, 'user')['phone']; ?>">
+                              <input type="text" class="form-control" id="phone" name="phone" placeholder="" 
+                              value="<?= get_result($conn,$id, 'user')['phone']; ?>">
                             </div>
                           </div>
                           <!-- end col -->
@@ -430,9 +433,6 @@ include 'partials/main.php'; ?> <head> <?php
         <!-- container -->
       </div>
       <!-- content --> <?php include 'partials/footer.php'; ?> </div>
-    <!-- ============================================================== -->
-    <!-- End Page content -->
-    <!-- ============================================================== -->
   </div>
   <!-- END wrapper --> <?php include 'partials/right-sidebar.php'; ?> <?php include 'partials/footer-scripts.php'; ?>
 </body>

@@ -1,22 +1,11 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['material_user'])) {
-    header('Location: auth-login.php');
-    exit();
-}
-
-include 'partials/main.php';
+check_session($_SESSION['material_user']);
 ?> <head> <?php
     $title = "Invoices";
-    include 'partials/title-meta.php'; ?>
-  <!-- Plugins css -->
-  <link href="assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/datatables.net-select-bs5/css//select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" /> <?php include 'partials/head-css.php'; 
+    include 'partials/main.php';
+    include 'partials/title-meta.php'; 
+    include 'partials/head-css.php'; 
     include("services/database.php");
     include("assets/php/function.php");
     
@@ -67,31 +56,35 @@ include 'partials/main.php';
                           <th>Action</th>
                         </tr>
                       </thead>
-                      <tbody> <?php if($role == "petowner"){ $invoices_pet = mysqli_query($conn, "SELECT * FROM `invoices` WHERE `pet_owner_id` = '$pet_id'  ORDER by `id` DESC"); }else{ $invoices_pet = mysqli_query($conn, "SELECT * FROM `invoices` WHERE `veterinarian_id` = '$pet_id'  ORDER by `id` DESC"); }
-                             while ($invoice = mysqli_fetch_assoc($invoices_pet)) { ?> 
+                      <tbody> <?php if($role == "petowner"){ 
+                        $invoice_pet = mysqli_query($conn, "SELECT * FROM `invoices` WHERE `pet_owner_id` = '$pet_id'  ORDER by `id` DESC"); }
+                        else{ $invoice_pet = mysqli_query($conn, "SELECT * FROM `invoices` WHERE `veterinarian_id` = '$pet_id'  ORDER by `id` DESC"); }
+                             while ($invoices = mysqli_fetch_assoc($invoice_pet)) { ?> 
                           <tr>
                           <td>
                             <h5 class="m-0 fw-normal">
-                              <a href="invoice_detail.php?id=<?php echo  $invoice['id'] ?>"> <?= $invoice['id'] ?> </a>
+                              <a href="invoice_detail.php?id=<?= $invoices['id'] ?>"> <?= $invoices['id'] ?> </a>
                             </h5>
                           </td>
                           <td>
-                            <h5 class="m-0 fw-normal"> <?php $date = $invoice['created_at'];
-                               $old_date_timestamp = strtotime($date);
-                                echo $new_date = date('Y/m/d', $old_date_timestamp);   
-                             ?> </h5>
+                            <h5 class="m-0 fw-normal">  <?php current_date($invoices['created_at']); ?></h5>
                           </td>
                           <td>
-                            <h5 class="m-0 fw-normal"> <?php $date = $invoice['created_at'];
-                              $old_date_timestamp = strtotime($date. ' + 3 days');
-                              echo $new_date = date('Y/m/d', $old_date_timestamp); 
-                            ?> </h5>
+                            <h5 class="m-0 fw-normal">  <?php exp_date($invoices['created_at']); ?></h5>
                           </td>
-                          <td> <?php if($invoice['status'] == '1'){?> <span class="badge bg-soft-warning text-warning">Created</span> <?php }else if($invoice['status'] == '2'){?> <span class="badge bg-soft-info text-info">Pending</span> <?php }else if($invoice['status'] == '3'){?> <span class="badge bg-soft-success text-success">Delivered</span> <?php }else if($invoice['status'] == '4'){?> <span class="badge bg-soft-warning text-warning">Delivered</span> <?php } ?>
+                          <td> <?php if($invoices['status'] == '1'){?> <span class="badge bg-soft-warning text-warning">Created
+                          </span> <?php }else if($invoices['status'] == '2'){?> <span class="badge bg-soft-info text-info">Pending
+                          </span> <?php }else if($invoices['status'] == '3'){?> <span class="badge bg-soft-success text-success">Delivered
+                          </span> <?php }else if($invoices['status'] == '4'){?> <span class="badge bg-soft-warning text-warning">Delivered
+                          </span> <?php } ?>
                           </td>
-                          <td> <?php if($invoice['status'] == '1'){?> <span class="badge bg-soft-success text-success">Paid</span> <?php }else if($invoice['status'] == '2'){?> <span class="badge bg-soft-info text-info">New</span> <?php }else if($invoice['status'] == '3'){?> <span class="badge bg-soft-success text-success">Paid</span> <?php }else if($invoice['status'] == '4'){?> <span class="badge bg-soft-warning text-warning">Delivered</span> <?php } ?>
+                          <td> <?php if($invoices['status'] == '1'){?> <span class="badge bg-soft-success text-success">Paid
+                          </span> <?php }else if($invoices['status'] == '2'){?> <span class="badge bg-soft-info text-info">New
+                          </span> <?php }else if($invoices['status'] == '3'){?> <span class="badge bg-soft-success text-success">Paid
+                          </span> <?php }else if($invoices['status'] == '4'){?> <span class="badge bg-soft-warning text-warning">Delivered
+                          </span> <?php } ?>
                           </td>
-                          <td> <?php if($invoice['status'] == '1'){?> <a href="#" invoice_id=<?php echo $invoice['id']; ?> class="badge bg-soft-success text-success">Pending </a> <?php }else if($invoice['status'] == '2'){?> <span class="badge bg-soft-info text-info">New</span> <?php }else if($invoice['status'] == '3'){?> <a href="https://api.wyngit.com/api/v1/orders/<?php echo $invoice['wyngit_id'] ?>/label?api_key=210511497528261495a6869d06439dc93d9220da5b129572e68f1ad1f3fbf8dc" class="badge bg-soft-danger text-danger">Paid </a> <?php }else if($invoice['status'] == '4'){?> <span class="badge bg-soft-warning text-warning">Delivered</span> <?php } ?> </td>
+                          <td> <?php if($invoices['status'] == '1'){?> <a href="#" invoice_id=<?php echo $invoices['id']; ?> class="badge bg-soft-success text-success">Pending </a> <?php }else if($invoices['status'] == '2'){?> <span class="badge bg-soft-info text-info">New</span> <?php }else if($invoices['status'] == '3'){?> <a href="https://api.wyngit.com/api/v1/orders/<?php echo $invoices['wyngit_id'] ?>/label?api_key=210511497528261495a6869d06439dc93d9220da5b129572e68f1ad1f3fbf8dc" class="badge bg-soft-danger text-danger">Paid </a> <?php }else if($invoices['status'] == '4'){?> <span class="badge bg-soft-warning text-warning">Delivered</span> <?php } ?> </td>
                           <td>
                             <div class="dropdown float-end">
                               <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
@@ -99,7 +92,7 @@ include 'partials/main.php';
                               </a>
                               <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
-                                <a href="assets/php/invoice_pdf.php?id=<?= $invoice['id'] ?>" class="dropdown-item" role="button">
+                                <a href="assets/php/invoice_pdf.php?id=<?= $invoices['id'] ?>" class="dropdown-item" role="button">
                                   <i class="mdi mdi-download"></i>Download </a>
                               </div>
                             </div>
@@ -120,30 +113,7 @@ include 'partials/main.php';
         <!-- container -->
       </div>
       <!-- content --> <?php include 'partials/footer.php'; ?> </div>
-    <!-- ============================================================== -->
-    <!-- End Page content -->
-    <!-- ============================================================== -->
   </div>
   <!-- END wrapper --> <?php include 'partials/right-sidebar.php'; ?> <?php include 'partials/footer-scripts.php'; ?>
-  <!-- Plugins js-->
-  <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-  <script src="assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
-  <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-  <script src="assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
-  <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-  <script src="assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-  <script src="assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
-  <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
-  <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/libs/selectize/js/standalone/selectize.min.js"></script>
-  <!-- Dashboar 1 init js-->
-  <script src="assets/js/pages/datatables.init.js"></script>
-  <script src="assets/libs/sweetalert2/sweetalert2.all.min.js"></script>
-  <!-- Dashboar 1 init js-->
-  <script src="assets/js/pages/authentication.init.js"></script>
 </body>
 </html>

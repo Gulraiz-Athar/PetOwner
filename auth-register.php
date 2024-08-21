@@ -1,7 +1,8 @@
-<?php include 'partials/main.php'; ?> <head> <?php
+<?php include 'partials/main.php'; ?> 
+  <head> <?php
     $title = "Register & Signup";
-    include 'partials/title-meta.php'; ?>
-  <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" /> <?php include 'partials/head-css.php'; ?>
+    include 'partials/title-meta.php'; 
+   include 'partials/head-css.php'; ?>
 </head>
 <body class="authentication-bg authentication-bg-pattern">
   <div class="account-pages mt-5 mb-5">
@@ -24,7 +25,6 @@
                       </span>
                     </a>
                   </div>
-                  <!-- <p class="text-muted mb-4 mt-3">Register Here.</p> -->
                 </div>
                 <div class="row">
                   <div class="col-md-4">
@@ -34,7 +34,6 @@
                     </div>
                     <div class="mb-3">
                       <label for="country" class="form-label">Country</label>
-                      <!-- <input class="form-control" type="text"  placeholder="Enter your country" name="country" required> -->
                       <select class="form-select" autocomplete="country" id="country" name="country">
                         <option value="AF">Afghanistan</option>
                         <option value="AX">Åland Islands</option>
@@ -293,7 +292,8 @@
                     <div class="mb-3">
                       <label for="password" class="form-label">Password</label>
                       <div class="input-group input-group-merge">
-                        <input type="password" class="form-control" placeholder="Enter your password" name="password" required>
+                        <input type="password" class="form-control" placeholder="Enter your password" 
+                        name="password" required>
                         <div class="input-group-text" data-password="false">
                           <span class="password-eye"></span>
                         </div>
@@ -301,7 +301,8 @@
                     </div>
                     <div class="mb-3 veterian">
                       <label for="pharmacy_name" class="form-label ">Pharmacy Name</label>
-                      <input class="form-control" type="text" placeholder="Enter your pharmacy name" name="pharmacy_name" required>
+                      <input class="form-control" type="text" placeholder="Enter your pharmacy name" 
+                      name="pharmacy_name" required>
                     </div>
                     <div class="mb-3 pet_owner" style="display:none;">
                       <label for="no_of_pets" class="form-label">No of Pets</label>
@@ -323,7 +324,8 @@
                   <div class="col-md-4">
                     <div class="mb-3">
                       <label for="email" class="form-label">Email address</label>
-                      <input class="form-control" type="email" required placeholder="Enter your email" name="email" required>
+                      <input class="form-control" type="email" required placeholder="Enter your email" name="email" 
+                      required>
                     </div>
                     <div class="mb-3">
                       <label for="province" class="form-label">Province</label>
@@ -331,7 +333,8 @@
                     </div>
                     <div class="mb-3">
                       <label for="postal_code" class="form-label">Postal Code</label>
-                      <input class="form-control" type="text" placeholder="Enter your Postal Code" name="postal_code" required>
+                      <input class="form-control" type="text" placeholder="Enter your Postal Code" name="postal_code" 
+                      required>
                     </div>
                     <div class="mb-3 veterian">
                       <label for="pharmacy_code" class="form-label ">Pharmacy Postal Code</label>
@@ -372,7 +375,8 @@
                     </div>
                     <div class="mb-3 veterian">
                       <label for="pharmacy_address" class="form-label ">Pharmacy Address</label>
-                      <input class="form-control" type="text" placeholder="Enter your pharmacy address" name="pharmacy_address" required>
+                      <input class="form-control" type="text" placeholder="Enter your pharmacy address" 
+                      name="pharmacy_address" required>
                     </div>
                     <div class="mb-3 pet_owner" style="display:none;">
                       <label for="address" class="form-label">Address</label>
@@ -407,27 +411,7 @@
   <!-- end container -->
   </div>
   <!-- end page -->
-  <footer class="footer footer-alt"> 2015 - <script>
-      document.write(new Date().getFullYear())
-    </script> &copy; Televet </footer> <?php include 'partials/right-sidebar.php'; ?>
-     <?php include 'partials/footer-scripts.php'; ?>
-  <!-- Authentication js -->
-  <script src="assets/libs/sweetalert2/sweetalert2.all.min.js"></script>
-  <!-- Sweet alert init js-->
-  <script src="assets/js/pages/authentication.init.js"></script>
-  <script>
-    $(document).ready(function() {
-      $("#role").change(function() {
-        var role = $(this).val();
-        if (role == "veterinarian") {
-          $(".veterian").show();
-          $(".pet_owner").hide();
-        } else {
-          $(".veterian").hide();
-          $(".pet_owner").show();
-        }
-      });
-    });
-  </script>
+  <?php include 'partials/right-sidebar.php'; ?>
+  <?php include 'partials/footer-scripts.php'; ?>
 </body>
 </html>

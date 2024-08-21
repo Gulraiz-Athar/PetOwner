@@ -1,3 +1,7 @@
+<footer class="footer footer-alt"> 2015 - <script>
+      document.write(new Date().getFullYear())
+    </script> &copy; Televet </footer>
+
 <!-- Theme Settings -->
 <div class="offcanvas offcanvas-end right-bar" tabindex="-1" id="theme-settings-offcanvas">
     <div class="d-flex align-items-center w-100 p-0 offcanvas-header">
