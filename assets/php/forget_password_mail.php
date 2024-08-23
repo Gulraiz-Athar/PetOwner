@@ -6,6 +6,9 @@ include("../../services/database.php");
 require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 require 'PHPMailer/Exception.php';
+// Load environment variables from the .env file
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 $email = $_POST['email'];
 
@@ -20,12 +23,12 @@ $insert_data = mysqli_query($conn, "INSERT INTO `forget_password`(`user_id`, `to
 $mail = new phpmailer\PHPMailer\PHPMailer();
 $mail->SMTPDebug = 2;            // Enable verbose debug output
 $mail->IsSMTP();                    // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com'; // cpanel url
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username   = 'testingtech789@gmail.com';
-$mail->Password   = 'utvntcrsjxhfphfh';                         // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
+$mail->Host = $_ENV['MAIL_HOST']; // Specify main and backup SMTP servers
+$mail->Port = $_ENV['MAIL_PORT']; // TCP port to connect to
+$mail->SMTPAuth = true; // Enable SMTP authentication
+$mail->Username = $_ENV['MAIL_USERNAME']; // SMTP username
+$mail->Password = $_ENV['MAIL_PASSWORD']; // SMTP password
+$mail->SMTPSecure = $_ENV['MAIL_ENCRYPTION']; // Enable TLS encryption, `ssl` also accepted       
 $mail->setfrom($email, 'Televet');
 $mail->addAddress($email, 'Televet');
 

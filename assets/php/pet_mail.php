@@ -5,6 +5,10 @@
     require 'PHPMailer/SMTP.php';
     require 'PHPMailer/Exception.php';
 
+    // Load environment variables from the .env file
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+
     $invoice_id = $_POST['invoice_id'];
     $get_invoice = mysqli_query($conn, "SELECT * FROM `invoices` WHERE `id` = '$invoice_id'");
     $row_invoice = mysqli_fetch_assoc($get_invoice);
@@ -23,12 +27,12 @@
     $mail = new phpmailer\PHPMailer\PHPMailer();
     $mail->SMTPDebug = 2;            // Enable verbose debug output
     $mail->IsSMTP();                    // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com'; // cpanel url
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username   = 'testingtech789@gmail.com';
-    $mail->Password   = 'utvntcrsjxhfphfh';                         // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 587;                                    // TCP port to connect to
+    $mail->Host = $_ENV['MAIL_HOST']; // Specify main and backup SMTP servers
+    $mail->Port = $_ENV['MAIL_PORT']; // TCP port to connect to
+    $mail->SMTPAuth = true; // Enable SMTP authentication
+    $mail->Username = $_ENV['MAIL_USERNAME']; // SMTP username
+    $mail->Password = $_ENV['MAIL_PASSWORD']; // SMTP password
+    $mail->SMTPSecure = $_ENV['MAIL_ENCRYPTION']; // Enable TLS encryption, `ssl` also accepted                                 // TCP port to connect to
     $mail->setfrom($email, 'Televet');
     $mail->addAddress($email, 'Televet');
     $mail->isHTML(true);                                  // Set email format to HTML
