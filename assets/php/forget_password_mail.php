@@ -2,47 +2,38 @@
 
 <?php 
 
-        include("../../services/database.php");
+include("../../services/database.php");
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
+require 'PHPMailer/Exception.php';
 
-        $email = $_POST['email'];
+$email = $_POST['email'];
 
-        $get_data = mysqli_query($conn, "SELECT * FROM `user` WHERE `email` = '$email'");
-        $row_data = mysqli_fetch_assoc($get_data);
-        $id = $row_data['id'];
+$get_data = mysqli_query($conn, "SELECT * FROM `user` WHERE `email` = '$email'");
+$row_data = mysqli_fetch_assoc($get_data);
+$id = $row_data['id'];
 
-        $token = substr(sha1(mt_rand()),17,6);
+$token = substr(sha1(mt_rand()),17,6);
 
-        $insert_data = mysqli_query($conn, "INSERT INTO `forget_password`(`user_id`, `token`) VALUES ('$id','$token')");
+$insert_data = mysqli_query($conn, "INSERT INTO `forget_password`(`user_id`, `token`) VALUES ('$id','$token')");
 
-        
+$mail = new phpmailer\PHPMailer\PHPMailer();
+$mail->SMTPDebug = 2;            // Enable verbose debug output
+$mail->IsSMTP();                    // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com'; // cpanel url
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username   = 'testingtech789@gmail.com';
+$mail->Password   = 'utvntcrsjxhfphfh';                         // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;                                    // TCP port to connect to
+$mail->setfrom($email, 'Televet');
+$mail->addAddress($email, 'Televet');
 
+$mail->isHTML(true);                                  // Set email format to HTML
 
-
-   
-        require 'PHPMailer/PHPMailer.php';
-        require 'PHPMailer/SMTP.php';
-        require 'PHPMailer/Exception.php';
-
-
-              $mail = new phpmailer\PHPMailer\PHPMailer();
-              $mail->SMTPDebug = 2;            // Enable verbose debug output
-              $mail->IsSMTP();                    // Set mailer to use SMTP
-              $mail->Host = 'smtp.gmail.com'; // cpanel url
-              $mail->SMTPAuth = true;                               // Enable SMTP authentication
-              $mail->Username   = 'testingtech789@gmail.com';
-              $mail->Password   = 'utvntcrsjxhfphfh';                         // SMTP password
-              $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-              $mail->Port = 587;                                    // TCP port to connect to
-              $mail->setfrom($email, 'Televet');
-              $mail->addAddress($email, 'Televet');
-
-              $mail->isHTML(true);                                  // Set email format to HTML
-          
-              $mail->Subject ="Invoice Email (Televet )";
-          
-              // Email Template
+$mail->Subject ="Invoice Email (Televet )";
               
-              $msg_body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+$msg_body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <!--[if (gte mso 9)|(IE)]>
@@ -329,21 +320,13 @@ u + #body a {color:inherit;text-decoration:none;font-size:inherit;font-family:in
 </table>
 
 </body>
-</html>
-
-
-';
-              $mail->Body = $msg_body;
-              if($mail->send()) {
-              
-                  echo "ok";
-                // echo $petowner_id;
-              
-                  
-              } else {
-                //   echo 'failed';
-                  echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-              }
+</html>';
+$mail->Body = $msg_body;
+if($mail->send()) {
+    echo "ok";
+} else {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
             
             
 ?>

@@ -16,26 +16,26 @@ include('config.php');
             $user_id = $rowid['id'];
             $add_token = mysqli_query($conn, "INSERT INTO `token`(`user_id`, `token`) VALUES ('$user_id','$token')");
             
-              $verification_temp ="";
-              $mail = new phpmailer\PHPMailer\PHPMailer();
-              $mail->SMTPDebug = 2;            // Enable verbose debug output
-              $mail->IsSMTP();                    // Set mailer to use SMTP
-              $mail->Host = 'smtp.gmail.com'; // cpanel url
-              $mail->SMTPAuth = true;                               // Enable SMTP authentication
-              $mail->Username   = 'testingtech789@gmail.com';
-              $mail->Password   = 'utvntcrsjxhfphfh';                         // SMTP password
-              $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-              $mail->Port = 587;                                    // TCP port to connect to
-              $mail->setfrom('gulraizathar87@gmail.com', 'Teracassa');
-              $mail->addAddress($user_email);
-              // $mail->addaddress('info@topwaterservices.com');
-              $mail->isHTML(true);                                  // Set email format to HTML
-          
-              $mail->Subject ="Contact Email (Terracassa )";
-          
-              // Email Template
-              
-              $msg_body = '<!DOCTYPE html>
+            $verification_temp ="";
+            $mail = new phpmailer\PHPMailer\PHPMailer();
+            $mail->SMTPDebug = 2;            // Enable verbose debug output
+            $mail->IsSMTP();                    // Set mailer to use SMTP
+            $mail->Host = 'smtp.gmail.com'; // cpanel url
+            $mail->SMTPAuth = true;                               // Enable SMTP authentication
+            $mail->Username   = 'testingtech789@gmail.com';
+            $mail->Password   = 'utvntcrsjxhfphfh';                         // SMTP password
+            $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+            $mail->Port = 587;                                    // TCP port to connect to
+            $mail->setfrom('gulraizathar87@gmail.com', 'Teracassa');
+            $mail->addAddress($user_email);
+            // $mail->addaddress('info@topwaterservices.com');
+            $mail->isHTML(true);                                  // Set email format to HTML
+        
+            $mail->Subject ="Contact Email (Terracassa )";
+        
+            // Email Template
+            
+            $msg_body = '<!DOCTYPE html>
             <html>
             <head>
             <style>

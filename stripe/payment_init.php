@@ -1,20 +1,13 @@
 <?php session_start();
  
 // Include the configuration file 
-require_once 'config.php'; 
-
-   include("../services/database.php");
-   
-require '../assets/php/PHPMailer/PHPMailer.php';
-require '../assets/php/PHPMailer/SMTP.php';
-require '../assets/php/PHPMailer/Exception.php';
-
- 
-// Include the database connection file 
-include_once 'dbConnect.php'; 
- 
-// Include the Stripe PHP library 
-require_once 'stripe-php/init.php'; 
+include 'config.php'; 
+include("../services/database.php");
+include '../assets/php/PHPMailer/PHPMailer.php';
+include '../assets/php/PHPMailer/SMTP.php';
+include '../assets/php/PHPMailer/Exception.php';
+include 'db_connect.php'; 
+include 'stripe-php/init.php'; 
  
 // Set API key 
 \Stripe\Stripe::setApiKey(STRIPE_API_KEY); 
@@ -23,22 +16,21 @@ require_once 'stripe-php/init.php';
 $jsonStr = file_get_contents('php://input'); 
 $jsonObj = json_decode($jsonStr); 
 
- 
 if($jsonObj->request_type == 'create_payment_intent'){ 
      
-    $itemPrice = $jsonObj->price;
-    // Define item price and convert to cents 
-   $itemPriceCents  = round($itemPrice*100); 
-     
+    $price = $jsonObj->price;
+    $price  = round($price*100);    
+    $description = 'Televet';
+    $currency = 'USD';
     // Set content type to JSON 
     header('Content-Type: application/json'); 
      
     try { 
         // Create PaymentIntent with amount and currency 
         $paymentIntent = \Stripe\PaymentIntent::create([ 
-            'amount' => $itemPriceCents, 
+            'amount' => $price, 
             'currency' => $currency, 
-            'description' => $itemName, 
+            'description' => 'Televet', 
             'payment_method_types' => [ 
                 'card' 
             ] 
@@ -65,8 +57,7 @@ if($jsonObj->request_type == 'create_payment_intent'){
             'name' => $name,  
             'email' => $email 
         )); 
-        
-        
+
     }catch(Exception $e) {   
         $api_error = $e->getMessage();   
     } 
@@ -138,8 +129,6 @@ if($jsonObj->request_type == 'create_payment_intent'){
             
             $role = $_SESSION['login_users']['role'];
 
-            // echo $role;
-            
             if($role == "admin"){
                  $user_id = $pet_owner_id;
             }else{
@@ -149,7 +138,7 @@ if($jsonObj->request_type == 'create_payment_intent'){
             // // Insert transaction data into the database 
             $sqlQ = "INSERT INTO transactions (customer_name,customer_email,item_name,item_price,item_price_currency,paid_amount,paid_amount_currency,txn_id,payment_status,invoice_id,user_id,created,modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,NOW(),NOW())"; 
             $stmt = $db->prepare($sqlQ); 
-            $stmt->bind_param("sssdsdsssss", $customer_name, $customer_email, $itemName, $itemPrice, $currency, $paid_amount, $paid_currency, $transaction_id, $payment_status,$invoice_id,$user_id); 
+            $stmt->bind_param("sssdsdsssss", $customer_name, $customer_email, $description, $price, $currency, $paid_amount, $paid_currency, $transaction_id, $payment_status,$invoice_id,$user_id); 
             $insert = $stmt->execute(); 
             
             if($insert){ 

@@ -1,50 +1,40 @@
 <?php session_start();
 
-        include("../../services/database.php");
+    include("../../services/database.php");
+    require 'PHPMailer/PHPMailer.php';
+    require 'PHPMailer/SMTP.php';
+    require 'PHPMailer/Exception.php';
 
     $invoice_id = $_POST['invoice_id'];
-        $get_invoice = mysqli_query($conn, "SELECT * FROM `invoices` WHERE `id` = '$invoice_id'");
-            $row_invoice = mysqli_fetch_assoc($get_invoice);
-            $paid_to_vet = $row_invoice['paid_to_vet'];
-            $pet_id = $row_invoice['pet_owner_id'];
-            $veterinarian_id = $row_invoice['veterinarian_id'];
+    $get_invoice = mysqli_query($conn, "SELECT * FROM `invoices` WHERE `id` = '$invoice_id'");
+    $row_invoice = mysqli_fetch_assoc($get_invoice);
+    $paid_to_vet = $row_invoice['paid_to_vet'];
+    $pet_id = $row_invoice['pet_owner_id'];
+    $veterinarian_id = $row_invoice['veterinarian_id'];
 
-            $vetuser_data = mysqli_query($conn, "SELECT * FROM `user` WHERE `id` = '$veterinarian_id'");
-            $row_vetusers = mysqli_fetch_assoc($vetuser_data);
-            $username = $row_vetusers['name'];
-            $email = $row_vetusers['email'];
-            
-            $user_data = mysqli_query($conn, "SELECT * FROM `user` WHERE `id` = '$pet_id'");
-            $row_users = mysqli_fetch_assoc($user_data);
-          
-            // $username = $row_users['name'];
-            
-            
-   
-        require 'PHPMailer/PHPMailer.php';
-        require 'PHPMailer/SMTP.php';
-        require 'PHPMailer/Exception.php';
+    $vetuser_data = mysqli_query($conn, "SELECT * FROM `user` WHERE `id` = '$veterinarian_id'");
+    $row_vetusers = mysqli_fetch_assoc($vetuser_data);
+    $username = $row_vetusers['name'];
+    $email = $row_vetusers['email'];
+    
+    $user_data = mysqli_query($conn, "SELECT * FROM `user` WHERE `id` = '$pet_id'");
+    $row_users = mysqli_fetch_assoc($user_data);
+     
+    $mail = new phpmailer\PHPMailer\PHPMailer();
+    $mail->SMTPDebug = 2;            // Enable verbose debug output
+    $mail->IsSMTP();                    // Set mailer to use SMTP
+    $mail->Host = 'smtp.gmail.com'; // cpanel url
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username   = 'testingtech789@gmail.com';
+    $mail->Password   = 'utvntcrsjxhfphfh';                         // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;                                    // TCP port to connect to
+    $mail->setfrom($email, 'Televet');
+    $mail->addAddress($email, 'Televet');
+    $mail->isHTML(true);                                  // Set email format to HTML
 
-
-     $mail = new phpmailer\PHPMailer\PHPMailer();
-              $mail->SMTPDebug = 2;            // Enable verbose debug output
-              $mail->IsSMTP();                    // Set mailer to use SMTP
-              $mail->Host = 'smtp.gmail.com'; // cpanel url
-              $mail->SMTPAuth = true;                               // Enable SMTP authentication
-              $mail->Username   = 'testingtech789@gmail.com';
-              $mail->Password   = 'utvntcrsjxhfphfh';                         // SMTP password
-              $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-              $mail->Port = 587;                                    // TCP port to connect to
-              $mail->setfrom($email, 'Televet');
-              $mail->addAddress($email, 'Televet');
-              // $mail->addaddress('info@topwaterservices.com');
-              $mail->isHTML(true);                                  // Set email format to HTML
-          
-              $mail->Subject ="Invoice Email (Televet )";
-          
-              // Email Template
-              
-              $msg_body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    $mail->Subject ="Invoice Email (Televet )";   
+    $msg_body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <!--[if (gte mso 9)|(IE)]>
@@ -408,11 +398,6 @@ u + #body a {color:inherit;text-decoration:none;font-size:inherit;font-family:in
   </tr>
   <!-- blue-thank-you-box -->
 </table>
-
-
-
-
-
     </td>
   </tr><!-- Outer-Table -->
 </table>
@@ -420,17 +405,10 @@ u + #body a {color:inherit;text-decoration:none;font-size:inherit;font-family:in
 </body>
 </html>
 ';
-              $mail->Body = $msg_body;
-              if($mail->send()) {
-              
-                  echo "ok";
-                // echo $petowner_id;
-              
-                  
-              } else {
-                //   echo 'failed';
-                  echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-              }
-            
-            
+  $mail->Body = $msg_body;
+  if($mail->send()) {
+      echo "ok"; 
+  } else {
+      echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  }       
 ?>

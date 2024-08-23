@@ -15,8 +15,6 @@ include("../../services/database.php");
     $now = new DateTime();
     $date = $now->format('Y-m-d');
     
-    
-    
     $query = mysqli_query($conn,"UPDATE `invoices` SET `veterinarian_id`='$veterinary_id',`pet_owner_id`='$petowner_id',`paid_to_vet`='$paid_to_vet',`units`='$units' WHERE `id` = '$invoice_id'");
         
     if($query){

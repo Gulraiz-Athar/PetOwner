@@ -4,29 +4,22 @@ include("../../services/database.php");
 
 if($_POST['flag'] == "update_image"){
     
-
     if(empty($_FILES['image']['size'])){
-        
-           
         
     }else{
         
+        $id = $_SESSION['login_users']['id'];
+        $filename = $_FILES["image"]["name"];
+        $tempname = $_FILES["image"]["tmp_name"];
+        $folder = "../images/" . $filename;
         
-            $id = $_SESSION['login_users']['id'];
-            $filename = $_FILES["image"]["name"];
-            $tempname = $_FILES["image"]["tmp_name"];
-            $folder = "../images/" . $filename;
-            
-            move_uploaded_file($tempname, $folder);
-            
-            $update_image = mysqli_query($conn, "UPDATE `user` SET `image` = '$filename' WHERE `id` = '$id'");
-            
+        move_uploaded_file($tempname, $folder);
+        
+        $update_image = mysqli_query($conn, "UPDATE `user` SET `image` = '$filename' WHERE `id` = '$id'");
         
     }
     
       header("location:../../vet_profile.php");
-    
-    
 }else{
 
     $name = $_POST['name'];
@@ -45,8 +38,6 @@ if($_POST['flag'] == "update_image"){
     $user_det = mysqli_query($conn, "SELECT * FROM `user` WHERE `id` = '$id'");
     $row_user_det = mysqli_fetch_assoc($user_det);
     $db_pass = $row_user_det['password'];
-
-    
     
     if($db_pass == $password){
         
@@ -55,8 +46,8 @@ if($_POST['flag'] == "update_image"){
         
     }else{
         
-            $password = md5($_POST['password']);
-         $update_user = mysqli_query($conn, "UPDATE `user` SET `password` = '$password', `name` = '$name', `phone` = '$phone' WHERE `id` = '$id'");
+        $password = md5($_POST['password']);
+        $update_user = mysqli_query($conn, "UPDATE `user` SET `password` = '$password', `name` = '$name', `phone` = '$phone' WHERE `id` = '$id'");
         $update_user_info = mysqli_query($conn, "UPDATE `user_info` SET `city` = '$city', `province` = '$province', `postal_code` = '$postal_code', `country` = '$country' , `pharmacy_name` = '$ph_name', `pharmacy_code` = '$ph_code', `pharmacy_address` = '$ph_address' WHERE `user_id` = '$id'");
         
     }

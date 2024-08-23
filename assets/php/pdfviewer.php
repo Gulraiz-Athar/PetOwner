@@ -6,17 +6,13 @@ if (!isset($_SESSION['material_user'])) {
     exit();
 }
  
- include("function.php");
+include("function.php");
 include("../../services/database.php");
 
-
-
- $invoices = mysqli_query($conn, "SELECT * FROM `invoices` WHERE `id` = '100'");
- $row_invoice_det = mysqli_fetch_assoc($invoices);
+$invoices = mysqli_query($conn, "SELECT * FROM `invoices` WHERE `id` = '100'");
+$row_invoice_det = mysqli_fetch_assoc($invoices);
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">

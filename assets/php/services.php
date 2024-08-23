@@ -10,6 +10,4 @@ if($_POST['flag'] == "petowner_data"){
     
 }
 
-
-
 ?>

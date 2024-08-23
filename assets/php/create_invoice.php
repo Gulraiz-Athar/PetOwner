@@ -28,34 +28,34 @@ require_once '../../stripe/stripe-php/init.php';
     $date = $now->format('Y-m-d');
     
     // Create a customer
-$customer = \Stripe\Customer::create([
-    'name' => $name,
-    'email' =>  $email,
-]);
+    $customer = \Stripe\Customer::create([
+        'name' => $name,
+        'email' =>  $email,
+    ]);
 
-$itemPriceCents  = round($paid_to_vet*100); 
-   
+    $amount  = round($paid_to_vet*100); 
+    
 
-\Stripe\InvoiceItem::create([
-    'customer' => $customer->id,
-    'amount' => $itemPriceCents,
-    'currency' => 'usd',
-]);
+    \Stripe\InvoiceItem::create([
+        'customer' => $customer->id,
+        'amount' => $amount,
+        'currency' => 'usd',
+    ]);
 
-// Create and finalize the invoice
-$invoice = \Stripe\Invoice::create([
-    'customer' => $customer->id,
-]);
+    // Create and finalize the invoice
+    $invoice = \Stripe\Invoice::create([
+        'customer' => $customer->id,
+    ]);
 
-  $invoice->finalizeInvoice();
+    $invoice->finalizeInvoice();
 
-$stripe_invoice_id = $invoice->id;
-$stripe_customer = $invoice->customer;
+    $stripe_invoice_id = $invoice->id;
+    $stripe_customer = $invoice->customer;
 
-      $query = mysqli_query($conn,"INSERT INTO `invoices`(`veterinarian_id`, `pet_owner_id`, `paid_to_vet`, `units`, `status`, `invoice_date`, `stripe_invoice_id`, `stripe_customer_invoice`) VALUES ('$veterinary_id','$petowner_id','$paid_to_vet','$units', '2', '$date', '$stripe_invoice_id', '$stripe_customer')");
-      $invoice_id = $conn->insert_id;
+    $query = mysqli_query($conn,"INSERT INTO `invoices`(`veterinarian_id`, `pet_owner_id`, `paid_to_vet`, `units`, `status`, `invoice_date`, `stripe_invoice_id`, `stripe_customer_invoice`) VALUES ('$veterinary_id','$petowner_id','$paid_to_vet','$units', '2', '$date', '$stripe_invoice_id', '$stripe_customer')");
+    $invoice_id = $conn->insert_id;
 
-echo $invoice_id;
+    echo $invoice_id;
 
 
 ?>

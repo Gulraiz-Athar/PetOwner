@@ -2,10 +2,6 @@
 include("../../services/database.php");
 
 session_start();
-
-
-
-
 if(isset($_REQUEST['email'])){
     $password = md5($_REQUEST['password']);
     $email = $_REQUEST['email'];
@@ -18,14 +14,11 @@ if(isset($_REQUEST['email'])){
       echo "verified";
     }else{
         
-        echo "not verified";
-        
+        echo "not verified";   
     }
-   
 
 }else{
     echo '0';
 }
-
 
 ?>

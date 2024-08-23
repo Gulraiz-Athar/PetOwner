@@ -2,12 +2,6 @@
 include("../../services/database.php");
 
 if(isset($_POST['invoiceno'])){
-    
-    
-    print_r($_POST);
-    exit;
-    
-    
     $invoiceno = $_POST['invoiceno'];
     $veterinary_id = $_POST['veterinary_id'];
     $petowner_id = $_POST['petowner_id'];
